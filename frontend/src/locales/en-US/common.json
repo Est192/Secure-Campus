@@ -1,0 +1,30 @@
+{
+  "app": {
+    "title": "SecureCampus",
+    "homeLabel": "SecureCampus home"
+  },
+  "dashboard": {
+    "eyebrow": "A safer, more connected campus",
+    "heading": "Campus safety and operations, in one place.",
+    "description": "A clear starting point for coordinating campus services and keeping your community informed."
+  },
+  "health": {
+    "title": "System status",
+    "description": "Live connection to the SecureCampus application API.",
+    "loading": "Checking connection",
+    "available": "Application is online",
+    "unavailable": "Application is unavailable"
+  },
+  "language": {
+    "label": "Choose language",
+    "names": {
+      "enUS": "English (United States)",
+      "esMX": "Español (México)",
+      "esES": "Español (España)",
+      "frFR": "Français",
+      "deDE": "Deutsch",
+      "ptBR": "Português (Brasil)",
+      "jaJP": "日本語"
+    }
+  }
+}

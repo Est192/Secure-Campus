@@ -1,0 +1,30 @@
+{
+  "app": {
+    "title": "SecureCampus",
+    "homeLabel": "SecureCampus ホーム"
+  },
+  "dashboard": {
+    "eyebrow": "より安全で、つながりのあるキャンパス",
+    "heading": "キャンパスの安全と運営を、ひとつの場所で。",
+    "description": "キャンパスのサービスを調整し、コミュニティに情報を届けるための明確な出発点です。"
+  },
+  "health": {
+    "title": "システムの状態",
+    "description": "SecureCampus アプリケーション API へのライブ接続です。",
+    "loading": "接続を確認しています",
+    "available": "アプリケーションはオンラインです",
+    "unavailable": "アプリケーションを利用できません"
+  },
+  "language": {
+    "label": "言語を選択",
+    "names": {
+      "enUS": "英語（アメリカ合衆国）",
+      "esMX": "スペイン語（メキシコ）",
+      "esES": "スペイン語（スペイン）",
+      "frFR": "フランス語",
+      "deDE": "ドイツ語",
+      "ptBR": "ポルトガル語（ブラジル）",
+      "jaJP": "日本語"
+    }
+  }
+}
