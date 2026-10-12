@@ -1,30 +1,171 @@
 {
-  "app": {
-    "title": "SecureCampus",
-    "homeLabel": "Inicio de SecureCampus"
+  "app": { "title": "SecureCampus", "homeLabel": "Inicio de SecureCampus" },
+  "brand": { "name": "SecureCampus", "tagline": "Plataforma universitaria" },
+  "navigation": {
+    "primary": "Navegación principal", "overview": "Resumen", "dashboard": "Panel",
+    "academic": "Académico", "academics": "Académico", "grades": "Calificaciones",
+    "documents": "Documentos", "requests": "Solicitudes", "calendar": "Calendario",
+    "management": "Gestión", "people": "Personas", "groups": "Grupos",
+    "reports": "Informes", "settings": "Configuración", "help": "Centro de ayuda",
+    "signOut": "Cerrar sesión"
+  },
+  "common": {
+    "close": "Cerrar", "closeNavigation": "Cerrar navegación", "openNavigation": "Abrir navegación",
+    "search": "Buscar en SecureCampus", "searchPlaceholder": "Buscar en SecureCampus",
+    "notifications": "Notificaciones", "openProfileMenu": "Abrir menú de perfil",
+    "viewAll": "Ver todo", "sampleDataNotice": "Datos de ejemplo para demostración",
+    "openRecord": "Abrir {{name}}", "recordSelected": "{{name}} seleccionado", "cancel": "Cancelar"
   },
   "dashboard": {
-    "eyebrow": "Un campus más seguro y conectado",
-    "heading": "Seguridad y gestión del campus, en un mismo lugar.",
-    "description": "Un punto de partida claro para coordinar los servicios del campus y mantener informada a la comunidad."
-  },
-  "health": {
-    "title": "Estado del sistema",
-    "description": "Conexión en tiempo real con la API de la aplicación SecureCampus.",
-    "loading": "Comprobando conexión",
-    "available": "La aplicación está en línea",
-    "unavailable": "La aplicación no está disponible"
+    "eyebrow": "Tu campus de un vistazo", "heading": "Seguridad y gestión del campus, en un mismo lugar.",
+    "description": "Un punto de partida claro para coordinar los servicios del campus y mantener informada a la comunidad.",
+    "greeting": "Buenos días, {{name}}", "subtitle": "Esto es lo que sucede hoy en tu campus.",
+    "roleSwitcher": "Elegir un rol de demostración", "rolePreview": "Vista previa como {{role}}", "newRequest": "Nueva solicitud",
+    "statistics": "Estadísticas del campus"
   },
   "language": {
     "label": "Elegir idioma",
-    "names": {
-      "enUS": "Inglés (Estados Unidos)",
-      "esMX": "Español (México)",
-      "esES": "Español (España)",
-      "frFR": "Francés",
-      "deDE": "Alemán",
-      "ptBR": "Portugués (Brasil)",
-      "jaJP": "Japonés"
+    "names": { "enUS": "Inglés (Estados Unidos)", "esMX": "Español (México)", "esES": "Español (España)", "frFR": "Francés", "deDE": "Alemán", "ptBR": "Portugués (Brasil)", "jaJP": "Japonés" }
+  },
+  "health": { "title": "Estado del sistema", "description": "Conexión en tiempo real con la API de SecureCampus.", "loading": "Comprobando conexión", "available": "La aplicación está en línea", "unavailable": "La aplicación no está disponible" },
+  "roles": { "student": "Estudiante", "teacher": "Docente", "head": "Jefe de departamento", "admin": "Administrador" },
+  "stats": {
+    "attendance": "Asistencia", "attendanceChange": "+2,4 % respecto al periodo anterior",
+    "activeCourses": "Cursos activos", "courseChange": "3 tareas pendientes",
+    "pendingRequests": "Solicitudes abiertas", "pendingChange": "4 requieren tu atención",
+    "documents": "Documentos", "documentChange": "8 añadidos este mes",
+    "completion": "Completado", "needsAttention": "Requiere atención"
+  },
+  "performance": { "title": "Rendimiento académico", "subtitle": "Tu progreso durante el año", "chartDescription": "Gráfico mensual del rendimiento académico" },
+  "chart": { "months": { "0": "Ene", "1": "Feb", "2": "Mar", "3": "Abr", "4": "May", "5": "Jun", "6": "Jul", "7": "Ago", "8": "Sep", "9": "Oct", "10": "Nov", "11": "Dic" } },
+  "activity": {
+    "title": "Actividad reciente", "subtitle": "Novedades de tu campus",
+    "gradeTitle": "Nueva calificación publicada", "gradeDetail": "Ya está disponible tu calificación de Biología avanzada",
+    "documentTitle": "Documento aprobado", "documentDetail": "Tu justificante de matrícula está listo",
+    "requestTitle": "Solicitud en curso", "requestDetail": "Se está revisando tu solicitud de ayuda económica",
+    "timeRecent": "Hace 2 horas", "timeYesterday": "Ayer", "timeThisWeek": "Esta semana", "allOpened": "Se ha abierto toda la actividad"
+  },
+  "courses": {
+    "title": "Tus cursos", "subtitle": "Resumen del periodo actual", "export": "Exportar",
+    "exportReady": "Se ha preparado el informe de cursos", "course": "Curso", "instructor": "Docente",
+    "credits": "Créditos", "progress": "Progreso", "grade": "Calificación"
+  },
+  "courseTitles": {
+    "security": "Seguridad avanzada", "statistics": "Estadística aplicada",
+    "networks": "Arquitectura de redes", "ethics": "Ética y sociedad",
+    "biology": "Biología avanzada", "design": "Taller de diseño de interacción",
+    "seminar": "Seminario de investigación"
+  },
+  "instructorNames": { "williams": "Dra. A. Williams", "kim": "Prof. J. Kim", "patel": "Dr. R. Patel", "garcia": "Prof. L. García" },
+  "quickActions": {
+    "documents": { "title": "Subir un documento" },
+    "calendar": { "title": "Ver calendario" },
+    "academics": { "title": "Ver cursos" }
+  },
+  "pageDescriptions": {
+    "academics": "Consulta tus cursos, tareas y recursos académicos.",
+    "grades": "Revisa tu rendimiento durante el periodo actual.",
+    "documents": "Consulta tus documentos universitarios oficiales en un mismo lugar.",
+    "requests": "Haz seguimiento de formularios, aprobaciones y solicitudes de ayuda.",
+    "groups": "Encuentra organizaciones estudiantiles y comunidades de investigación.",
+    "people": "Conecta con asesores, docentes y miembros de tu comunidad universitaria.",
+    "reports": "Consulta tu progreso académico.",
+    "calendar": "Revisa los próximos cursos, citas y eventos del campus.",
+    "help": "Encuentra respuestas y descubre cómo obtener ayuda en tu campus."
+  },
+  "grades": { "title": "Calificaciones actuales", "biology": "94 % global", "design": "97 % global", "seminar": "88 % global", "statistics": "92 % global", "gradeA": "A", "gradeB": "B+" },
+  "gradeTitles": {
+    "biology": "Biología avanzada", "design": "Taller de diseño de interacción",
+    "seminar": "Seminario de investigación", "statistics": "Estadística para ciencias sociales"
+  },
+  "documents": {
+    "title": "Documentos recientes", "transcriptDate": "12 de octubre de 2025",
+    "enrollmentDate": "8 de octubre de 2025", "scholarshipDate": "2 de octubre de 2025",
+    "studentIdDate": "28 de septiembre de 2025"
+  },
+  "documentTitles": {
+    "transcript": "Expediente académico oficial", "enrollment": "Justificante de matrícula",
+    "scholarship": "Carta de beca", "studentId": "Confirmación del carné de estudiante"
+  },
+  "status": {
+    "approved": "Aprobado", "ready": "Listo", "processing": "En tramitación",
+    "inProgress": "En curso", "scheduled": "Programado", "submitted": "Enviado",
+    "active": "Activo", "open": "Abierto"
+  },
+  "requests": {
+    "title": "Solicitudes recientes", "updatedYesterday": "Actualizada ayer",
+    "dueSoon": "Fecha límite: 18 de octubre", "appointmentDate": "21 de octubre de 2025",
+    "submittedDate": "9 de octubre de 2025"
+  },
+  "requestTitles": {
+    "transcript": "Solicitud de expediente académico", "financialAid": "Revisión de ayuda económica",
+    "advisor": "Cita con el asesor", "replacement": "Reposición del carné de estudiante"
+  },
+  "groups": {
+    "title": "Grupos del campus", "researchMembers": "24 integrantes",
+    "designMembers": "86 integrantes", "wellnessMembers": "42 integrantes",
+    "dataMembers": "61 integrantes"
+  },
+  "groupTitles": {
+    "research": "Grupo estudiantil de investigación", "design": "Sociedad de diseño",
+    "wellness": "Círculo de bienestar del campus", "data": "Club de ciencia de datos"
+  },
+  "people": {
+    "title": "Directorio del campus", "maya": "Dra. Maya Chen", "james": "James Wilson",
+    "nora": "Nora Patel", "alex": "Alex Romero", "advisor": "Asesora académica",
+    "departmentHead": "Jefe de departamento", "instructor": "Docente del curso",
+    "studentServices": "Servicios estudiantiles", "emailMaya": "maya.chen@securecampus.edu",
+    "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
+    "emailAlex": "alex.romero@securecampus.edu"
+  },
+  "profile": { "name": "Olivia Martin", "firstName": "Olivia" },
+  "notifications": {
+    "title": "Notificaciones", "message": "Tienes 3 novedades del campus sin leer.",
+    "markAllRead": "Marcar todo como leído", "markedRead": "Notificaciones marcadas como leídas"
+  },
+  "dialogs": {
+    "actions": {
+      "newRequest": "Nueva solicitud", "uploadDocument": "Subir documento",
+      "createGroup": "Crear grupo", "createUser": "Crear usuario",
+      "browseCourses": "Ver cursos", "browseCalendar": "Ver calendario",
+      "browseAcademics": "Ver información académica"
+    },
+    "dropFile": "Elige un documento para subir", "fileTypes": "PDF, DOCX o PNG; máximo 10 MB",
+    "upload": "Subir documento", "titleField": "Título o nombre", "descriptionField": "Descripción",
+    "save": "Guardar y continuar", "saved": "Los cambios se han guardado en esta demostración.",
+    "uploadStarted": "Se ha simulado la carga del documento.", "genericAction": "Esta acción es solo una demostración."
+  },
+  "reports": {
+    "eyebrow": "Planificación e información", "export": "Exportar informe",
+    "exportReady": "Se ha preparado la exportación del informe", "progressTitle": "Progreso académico",
+    "attendanceTitle": "Asistencia por curso", "week": "Semana {{number}}"
+  },
+  "calendar": {
+    "today": "Próximos eventos", "event1": "Clase de biología", "event2": "Seminario de investigación",
+    "event3": "Reunión con la asesora", "time1": "9:00", "time2": "13:30", "time3": "15:00"
+  },
+  "settings": {
+    "eyebrow": "Preferencias del espacio de trabajo", "profileTitle": "Información del perfil",
+    "fullName": "Nombre completo", "email": "Correo universitario", "program": "Programa académico",
+    "programValue": "Grado en Diseño de Interacción", "save": "Guardar cambios",
+    "saved": "Los cambios del perfil se han guardado en esta demostración."
+  },
+  "help": {
+    "eyebrow": "Centro de asistencia", "topicSelected": "Tema de ayuda seleccionado.",
+    "topics": {
+      "transcript": { "title": "¿Cómo solicito un expediente académico?", "description": "Información sobre documentos y aprobaciones." },
+      "grades": { "title": "¿Cómo se calculan las calificaciones?", "description": "Consulta tu expediente académico." },
+      "support": { "title": "Contactar con el soporte del campus", "description": "Recibe ayuda del equipo de servicios estudiantiles." },
+      "privacy": { "title": "Seguridad y privacidad", "description": "Descubre cómo se protegen tus datos." }
     }
+  },
+  "login": {
+    "title": "Te damos la bienvenida", "description": "Inicia sesión para acceder a tu espacio del campus.",
+    "mockNotice": "Solo para demostración. El inicio de sesión y el restablecimiento de contraseña no están conectados a un sistema de autenticación.",
+    "email": "Correo universitario", "password": "Contraseña",
+    "signIn": "Continuar con la demostración", "forgotPassword": "¿Has olvidado tu contraseña?",
+    "resetTitle": "Restablecer contraseña",
+    "resetDescription": "Introduce tu correo universitario para ver la demostración de restablecimiento.",
+    "sendReset": "Continuar", "back": "Volver al inicio de sesión"
   }
 }

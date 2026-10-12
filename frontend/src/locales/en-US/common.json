@@ -3,10 +3,64 @@
     "title": "SecureCampus",
     "homeLabel": "SecureCampus home"
   },
+  "brand": {
+    "name": "SecureCampus",
+    "tagline": "University platform"
+  },
+  "navigation": {
+    "primary": "Primary navigation",
+    "overview": "Overview",
+    "dashboard": "Dashboard",
+    "academic": "Academics",
+    "academics": "Academics",
+    "grades": "Grades",
+    "documents": "Documents",
+    "requests": "Requests",
+    "calendar": "Calendar",
+    "management": "Management",
+    "people": "People",
+    "groups": "Groups",
+    "reports": "Reports",
+    "settings": "Settings",
+    "help": "Help center",
+    "signOut": "Sign out"
+  },
+  "common": {
+    "close": "Close",
+    "closeNavigation": "Close navigation",
+    "openNavigation": "Open navigation",
+    "search": "Search SecureCampus",
+    "searchPlaceholder": "Search SecureCampus",
+    "notifications": "Notifications",
+    "openProfileMenu": "Open profile menu",
+    "viewAll": "View all",
+    "sampleDataNotice": "Sample data for demonstration",
+    "openRecord": "Open {{name}}",
+    "recordSelected": "{{name}} selected",
+    "cancel": "Cancel"
+  },
   "dashboard": {
-    "eyebrow": "A safer, more connected campus",
+    "eyebrow": "Your campus at a glance",
     "heading": "Campus safety and operations, in one place.",
-    "description": "A clear starting point for coordinating campus services and keeping your community informed."
+    "description": "A clear starting point for coordinating campus services and keeping your community informed.",
+    "greeting": "Good morning, {{name}}",
+    "subtitle": "Here is what is happening across your campus today.",
+    "roleSwitcher": "Choose a demonstration role",
+    "rolePreview": "Previewing as {{role}}",
+    "newRequest": "New request",
+    "statistics": "Campus statistics"
+  },
+  "language": {
+    "label": "Choose language",
+    "names": {
+      "enUS": "English (United States)",
+      "esMX": "Spanish (Mexico)",
+      "esES": "Spanish (Spain)",
+      "frFR": "French",
+      "deDE": "German",
+      "ptBR": "Portuguese (Brazil)",
+      "jaJP": "Japanese"
+    }
   },
   "health": {
     "title": "System status",
@@ -15,16 +69,276 @@
     "available": "Application is online",
     "unavailable": "Application is unavailable"
   },
-  "language": {
-    "label": "Choose language",
-    "names": {
-      "enUS": "English (United States)",
-      "esMX": "Español (México)",
-      "esES": "Español (España)",
-      "frFR": "Français",
-      "deDE": "Deutsch",
-      "ptBR": "Português (Brasil)",
-      "jaJP": "日本語"
+  "roles": {
+    "student": "Student",
+    "teacher": "Teacher",
+    "head": "Department head",
+    "admin": "Administrator"
+  },
+  "stats": {
+    "attendance": "Attendance",
+    "attendanceChange": "+2.4% from last term",
+    "activeCourses": "Active courses",
+    "courseChange": "3 assignments due",
+    "pendingRequests": "Open requests",
+    "pendingChange": "4 need your attention",
+    "documents": "Documents",
+    "documentChange": "8 added this month",
+    "completion": "Completed",
+    "needsAttention": "Needs attention"
+  },
+  "performance": {
+    "title": "Academic performance",
+    "subtitle": "Your progress throughout the year",
+    "chartDescription": "Monthly academic performance chart"
+  },
+  "chart": {
+    "months": {
+      "0": "Jan",
+      "1": "Feb",
+      "2": "Mar",
+      "3": "Apr",
+      "4": "May",
+      "5": "Jun",
+      "6": "Jul",
+      "7": "Aug",
+      "8": "Sep",
+      "9": "Oct",
+      "10": "Nov",
+      "11": "Dec"
     }
+  },
+  "activity": {
+    "title": "Recent activity",
+    "subtitle": "Updates from your campus",
+    "gradeTitle": "New grade posted",
+    "gradeDetail": "Advanced Biology grade is available",
+    "documentTitle": "Document approved",
+    "documentDetail": "Your enrollment verification is ready",
+    "requestTitle": "Request in progress",
+    "requestDetail": "Financial aid review is being processed",
+    "timeRecent": "2 hours ago",
+    "timeYesterday": "Yesterday",
+    "timeThisWeek": "This week",
+    "allOpened": "All activity opened"
+  },
+  "courses": {
+    "title": "Your courses",
+    "subtitle": "Current semester overview",
+    "export": "Export",
+    "exportReady": "Course report prepared",
+    "course": "Course",
+    "instructor": "Instructor",
+    "credits": "Credits",
+    "progress": "Progress",
+    "grade": "Grade"
+  },
+  "courseTitles": {
+    "security": "Advanced Security",
+    "statistics": "Applied Statistics",
+    "networks": "Network Architecture",
+    "ethics": "Ethics and Society",
+    "biology": "Advanced Biology",
+    "design": "Interaction Design Studio",
+    "seminar": "Research Seminar"
+  },
+  "instructorNames": {
+    "williams": "Dr. A. Williams",
+    "kim": "Prof. J. Kim",
+    "patel": "Dr. R. Patel",
+    "garcia": "Prof. L. Garcia"
+  },
+  "quickActions": {
+    "documents": {
+      "title": "Upload a document"
+    },
+    "calendar": {
+      "title": "Browse calendar"
+    },
+    "academics": {
+      "title": "Browse courses"
+    }
+  },
+  "pageDescriptions": {
+    "academics": "Stay on top of your courses, assignments, and academic resources.",
+    "grades": "Review your performance across the current semester.",
+    "documents": "Access your official university documents in one place.",
+    "requests": "Track forms, approvals, and support requests from campus offices.",
+    "groups": "Find student organizations and research communities that match your interests.",
+    "people": "Connect with advisors, faculty, and members of your campus community.",
+    "reports": "Understand progress across your academic journey.",
+    "calendar": "Review upcoming courses, appointments, and campus events.",
+    "help": "Find answers and learn how to get support from your campus."
+  },
+  "grades": {
+    "title": "Current grades",
+    "biology": "94% overall",
+    "design": "97% overall",
+    "seminar": "88% overall",
+    "statistics": "92% overall",
+    "gradeA": "A",
+    "gradeB": "B+"
+  },
+  "gradeTitles": {
+    "biology": "Advanced Biology",
+    "design": "Interaction Design Studio",
+    "seminar": "Research Seminar",
+    "statistics": "Statistics for Social Science"
+  },
+  "documents": {
+    "title": "Recent documents",
+    "transcriptDate": "October 12, 2025",
+    "enrollmentDate": "October 8, 2025",
+    "scholarshipDate": "October 2, 2025",
+    "studentIdDate": "September 28, 2025"
+  },
+  "documentTitles": {
+    "transcript": "Official transcript",
+    "enrollment": "Enrollment verification",
+    "scholarship": "Scholarship letter",
+    "studentId": "Student ID confirmation"
+  },
+  "status": {
+    "approved": "Approved",
+    "ready": "Ready",
+    "processing": "Processing",
+    "inProgress": "In progress",
+    "scheduled": "Scheduled",
+    "submitted": "Submitted",
+    "active": "Active",
+    "open": "Open"
+  },
+  "requests": {
+    "title": "Recent requests",
+    "updatedYesterday": "Updated yesterday",
+    "dueSoon": "Due October 18",
+    "appointmentDate": "October 21, 2025",
+    "submittedDate": "October 9, 2025"
+  },
+  "requestTitles": {
+    "transcript": "Transcript request",
+    "financialAid": "Financial aid review",
+    "advisor": "Advisor appointment",
+    "replacement": "Student ID replacement"
+  },
+  "groups": {
+    "title": "Campus groups",
+    "researchMembers": "24 members",
+    "designMembers": "86 members",
+    "wellnessMembers": "42 members",
+    "dataMembers": "61 members"
+  },
+  "groupTitles": {
+    "research": "Student Research Group",
+    "design": "Design Society",
+    "wellness": "Campus Wellness Circle",
+    "data": "Data Science Club"
+  },
+  "people": {
+    "title": "Campus directory",
+    "maya": "Dr. Maya Chen",
+    "james": "James Wilson",
+    "nora": "Nora Patel",
+    "alex": "Alex Romero",
+    "advisor": "Academic advisor",
+    "departmentHead": "Department head",
+    "instructor": "Course instructor",
+    "studentServices": "Student services",
+    "emailMaya": "maya.chen@securecampus.edu",
+    "emailJames": "james.wilson@securecampus.edu",
+    "emailNora": "nora.patel@securecampus.edu",
+    "emailAlex": "alex.romero@securecampus.edu"
+  },
+  "profile": {
+    "name": "Olivia Martin",
+    "firstName": "Olivia"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "message": "You have 3 unread campus updates.",
+    "markAllRead": "Mark all as read",
+    "markedRead": "Notifications marked as read"
+  },
+  "dialogs": {
+    "actions": {
+      "newRequest": "New request",
+      "uploadDocument": "Upload document",
+      "createGroup": "Create group",
+      "createUser": "Create user",
+      "browseCourses": "Browse courses",
+      "browseCalendar": "Browse calendar",
+      "browseAcademics": "Browse academics"
+    },
+    "dropFile": "Choose a document to upload",
+    "fileTypes": "PDF, DOCX, or PNG; maximum 10 MB",
+    "upload": "Upload document",
+    "titleField": "Title or name",
+    "descriptionField": "Description",
+    "save": "Save and continue",
+    "saved": "Your changes were saved in this demo.",
+    "uploadStarted": "Document upload simulated.",
+    "genericAction": "This action is a demonstration only."
+  },
+  "reports": {
+    "eyebrow": "Planning and insights",
+    "export": "Export report",
+    "exportReady": "Report export prepared",
+    "progressTitle": "Academic progress",
+    "attendanceTitle": "Attendance by course",
+    "week": "Week {{number}}"
+  },
+  "calendar": {
+    "today": "Upcoming schedule",
+    "event1": "Biology lecture",
+    "event2": "Research seminar",
+    "event3": "Advisor meeting",
+    "time1": "9:00 AM",
+    "time2": "1:30 PM",
+    "time3": "3:00 PM"
+  },
+  "settings": {
+    "eyebrow": "Workspace preferences",
+    "profileTitle": "Profile information",
+    "fullName": "Full name",
+    "email": "University email",
+    "program": "Program",
+    "programValue": "BSc Interaction Design",
+    "save": "Save changes",
+    "saved": "Profile changes saved in this demo."
+  },
+  "help": {
+    "eyebrow": "Support center",
+    "topicSelected": "Help topic selected.",
+    "topics": {
+      "transcript": {
+        "title": "How do I request a transcript?",
+        "description": "Learn about documents and approvals."
+      },
+      "grades": {
+        "title": "How are grades calculated?",
+        "description": "Review your academic record and history."
+      },
+      "support": {
+        "title": "Contact campus support",
+        "description": "Get help from the student services team."
+      },
+      "privacy": {
+        "title": "Security and privacy",
+        "description": "Learn how your records are protected."
+      }
+    }
+  },
+  "login": {
+    "title": "Welcome back",
+    "description": "Sign in to access your campus workspace.",
+    "mockNotice": "Demonstration only. Sign-in and password reset are not connected to authentication.",
+    "email": "University email",
+    "password": "Password",
+    "signIn": "Continue to demonstration",
+    "forgotPassword": "Forgot password?",
+    "resetTitle": "Reset your password",
+    "resetDescription": "Enter your university email to see the password reset demonstration.",
+    "sendReset": "Continue",
+    "back": "Back to sign in"
   }
 }

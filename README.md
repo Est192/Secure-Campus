@@ -49,6 +49,12 @@ before starting PHP-FPM.
 - API health check: <http://localhost:8080/api/health>
 - Laravel's built-in health check: <http://localhost:8080/up>
 
+The frontend includes a dashboard and sections for academics, grades,
+documents, requests, people, groups, reports, calendar, settings, and help.
+These screens currently use in-memory sample data and demonstration-only
+actions; changes are not persisted. The login and password-reset screens are
+also placeholders and are not connected to authentication.
+
 Frontend source changes are available through the Vite server immediately.
 Backend changes are bind-mounted into the PHP container. The node container
 proxies `/api` requests to Nginx.
