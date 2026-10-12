@@ -59,6 +59,28 @@ Frontend source changes are available through the Vite server immediately.
 Backend changes are bind-mounted into the PHP container. The node container
 proxies `/api` requests to Nginx.
 
+## Backend API
+
+The Laravel REST API is versioned under `/api/v1`; `/api/health` remains
+available for health checks. The backend provides role-aware user, academic,
+enrollment, grade, document, and request endpoints, plus summary reports.
+Management endpoints require a Sanctum bearer token; API login and logout are
+available at `/api/v1/auth/login` and `/api/v1/auth/logout`.
+
+Read [docs/api-usage.md](./docs/api-usage.md) for endpoint examples and
+[docs/openapi.yaml](./docs/openapi.yaml) for the OpenAPI contract. The data
+model and relationships are described in
+[docs/database-schema.md](./docs/database-schema.md), with the application
+structure in [docs/architecture.md](./docs/architecture.md).
+
+Run backend checks and inspect the registered endpoints inside Docker:
+
+```sh
+docker compose exec app php artisan test
+docker compose exec app php artisan route:list --path=api
+docker compose exec app php artisan migrate:status
+```
+
 Useful commands:
 
 ```sh
@@ -94,8 +116,14 @@ Run the database seeder when needed:
 docker compose exec app php artisan db:seed
 ```
 
-Production deployment uses `--force` for migrations and seeders. Do not add
-sample accounts or test data to production seeders.
+The database seeder creates the Administrator, Teacher, Department Head, and
+Student roles. It does not create a default account. To bootstrap an
+administrator for local development, set both `BOOTSTRAP_ADMIN_EMAIL` and
+`BOOTSTRAP_ADMIN_PASSWORD` in `backend/.env`, then rerun the seeder. The
+password must be at least 12 characters. Remove bootstrap credentials after
+the initial account is created. Production deployment uses `--force` for
+migrations and seeders; do not add sample accounts or test data to production
+seeders.
 
 ## Frontend build
 
