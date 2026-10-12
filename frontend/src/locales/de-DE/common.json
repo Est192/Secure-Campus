@@ -145,9 +145,13 @@
   },
   "settings": {
     "eyebrow": "Arbeitsbereich-Einstellungen", "profileTitle": "Profilinformationen",
-    "fullName": "Vollständiger Name", "email": "Universitäts-E-Mail", "program": "Studiengang",
-    "programValue": "Bachelor Interaktionsdesign", "save": "Änderungen speichern",
-    "saved": "Profiländerungen in dieser Demo gespeichert."
+    "firstName": "Vorname", "lastName": "Nachname", "email": "Universitäts-E-Mail",
+    "phone": "Telefon", "program": "Studiengang", "noProgram": "Kein Studiengang",
+    "save": "Änderungen speichern", "saving": "Wird gespeichert...",
+    "saved": "Profiländerungen wurden gespeichert.",
+    "loadError": "Profil konnte nicht geladen werden. Aktualisieren Sie die Seite und versuchen Sie es erneut.",
+    "updateError": "Profiländerungen konnten nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "programsError": "Studiengänge konnten nicht geladen werden."
   },
   "help": {
     "eyebrow": "Supportcenter", "topicSelected": "Hilfethema ausgewählt.",
@@ -160,11 +164,16 @@
   },
   "login": {
     "title": "Willkommen zurück", "description": "Melden Sie sich an, um Ihren Campusbereich aufzurufen.",
-    "mockNotice": "Nur eine Demonstration. Anmeldung und Passwortzurücksetzung sind nicht mit einer Authentifizierung verbunden.",
+    "mockNotice": "Melden Sie sich mit Ihrem Campus-Konto an. Wenden Sie sich bei Bedarf an eine Campus-Administration.",
     "email": "Universitäts-E-Mail", "password": "Passwort",
-    "signIn": "Demonstration fortsetzen", "forgotPassword": "Passwort vergessen?",
+    "signIn": "Anmelden", "forgotPassword": "Passwort vergessen?",
     "resetTitle": "Passwort zurücksetzen",
-    "resetDescription": "Geben Sie Ihre Universitäts-E-Mail ein, um die Demo zum Zurücksetzen anzuzeigen.",
-    "sendReset": "Fortfahren", "back": "Zurück zur Anmeldung"
+    "resetDescription": "Das Zurücksetzen des Passworts ist noch nicht verfügbar. Wenden Sie sich an die Campus-Administration.",
+    "sendReset": "Fortfahren", "back": "Zurück zur Anmeldung",
+    "invalidCredentials": "E-Mail-Adresse oder Passwort ist falsch.",
+    "authError": "Anmeldung derzeit nicht möglich. Bitte versuchen Sie es erneut.",
+    "logoutError": "Der Server hat die Abmeldung nicht bestätigt. Ihre lokale Sitzung wurde gelöscht.",
+    "resetUnavailable": "Das Zurücksetzen des Passworts ist noch nicht verfügbar. Wenden Sie sich an die Campus-Administration.",
+    "restoringSession": "Ihre Sitzung wird wiederhergestellt."
   }
 }

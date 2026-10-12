@@ -145,9 +145,13 @@
   },
   "settings": {
     "eyebrow": "Préférences de l’espace de travail", "profileTitle": "Informations du profil",
-    "fullName": "Nom complet", "email": "Adresse universitaire", "program": "Programme",
-    "programValue": "Licence en design d’interaction", "save": "Enregistrer les modifications",
-    "saved": "Modifications du profil enregistrées dans cette démonstration."
+    "firstName": "Prénom", "lastName": "Nom", "email": "Adresse universitaire",
+    "phone": "Téléphone", "program": "Programme", "noProgram": "Aucun programme",
+    "save": "Enregistrer les modifications", "saving": "Enregistrement...",
+    "saved": "Les modifications du profil ont été enregistrées.",
+    "loadError": "Impossible de charger votre profil. Actualisez la page pour réessayer.",
+    "updateError": "Impossible d’enregistrer les modifications du profil. Veuillez réessayer.",
+    "programsError": "Impossible de charger les programmes."
   },
   "help": {
     "eyebrow": "Centre d’assistance", "topicSelected": "Sujet d’aide sélectionné.",
@@ -160,11 +164,16 @@
   },
   "login": {
     "title": "Ravi de vous revoir", "description": "Connectez-vous pour accéder à votre espace de campus.",
-    "mockNotice": "Démonstration uniquement. La connexion et la réinitialisation du mot de passe ne sont reliées à aucun système d’authentification.",
+    "mockNotice": "Connectez-vous avec votre compte de campus. Contactez un administrateur si vous avez besoin d’un accès.",
     "email": "Adresse universitaire", "password": "Mot de passe",
-    "signIn": "Continuer la démonstration", "forgotPassword": "Mot de passe oublié ?",
+    "signIn": "Se connecter", "forgotPassword": "Mot de passe oublié ?",
     "resetTitle": "Réinitialiser le mot de passe",
-    "resetDescription": "Saisissez votre adresse universitaire pour voir la démonstration de réinitialisation.",
-    "sendReset": "Continuer", "back": "Retour à la connexion"
+    "resetDescription": "La réinitialisation du mot de passe n’est pas encore disponible. Contactez un administrateur.",
+    "sendReset": "Continuer", "back": "Retour à la connexion",
+    "invalidCredentials": "L’adresse e-mail ou le mot de passe est incorrect.",
+    "authError": "Connexion impossible pour le moment. Veuillez réessayer.",
+    "logoutError": "Le serveur n’a pas confirmé la déconnexion. Votre session locale a été supprimée.",
+    "resetUnavailable": "La réinitialisation du mot de passe n’est pas encore disponible. Contactez un administrateur.",
+    "restoringSession": "Restauration de votre session."
   }
 }

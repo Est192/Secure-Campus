@@ -145,9 +145,13 @@
   },
   "settings": {
     "eyebrow": "ワークスペースの設定", "profileTitle": "プロフィール情報",
-    "fullName": "氏名", "email": "大学メールアドレス", "program": "専攻",
-    "programValue": "インタラクションデザイン学士課程", "save": "変更を保存",
-    "saved": "デモ内でプロフィールを保存しました。"
+    "firstName": "名", "lastName": "姓", "email": "大学メールアドレス",
+    "phone": "電話番号", "program": "専攻", "noProgram": "専攻なし",
+    "save": "変更を保存", "saving": "保存中...",
+    "saved": "プロフィールを保存しました。",
+    "loadError": "プロフィールを読み込めませんでした。ページを更新して再試行してください。",
+    "updateError": "プロフィールを保存できませんでした。もう一度お試しください。",
+    "programsError": "専攻を読み込めませんでした。"
   },
   "help": {
     "eyebrow": "サポートセンター", "topicSelected": "ヘルプ項目を選択しました。",
@@ -160,11 +164,16 @@
   },
   "login": {
     "title": "おかえりなさい", "description": "サインインしてキャンパスのワークスペースにアクセスします。",
-    "mockNotice": "デモ専用です。サインインとパスワード再設定は認証システムに接続されていません。",
+    "mockNotice": "大学のアカウントでサインインしてください。アクセスが必要な場合は管理者にお問い合わせください。",
     "email": "大学メールアドレス", "password": "パスワード",
-    "signIn": "デモを続行", "forgotPassword": "パスワードをお忘れですか？",
+    "signIn": "サインイン", "forgotPassword": "パスワードをお忘れですか？",
     "resetTitle": "パスワードを再設定",
-    "resetDescription": "大学メールアドレスを入力して再設定のデモを表示します。",
-    "sendReset": "続行", "back": "サインインに戻る"
+    "resetDescription": "パスワードの再設定は現在利用できません。管理者にお問い合わせください。",
+    "sendReset": "続行", "back": "サインインに戻る",
+    "invalidCredentials": "メールアドレスまたはパスワードが正しくありません。",
+    "authError": "現在サインインできません。もう一度お試しください。",
+    "logoutError": "サーバーでサインアウトを確認できませんでした。ローカルセッションを削除しました。",
+    "resetUnavailable": "パスワードの再設定は現在利用できません。管理者にお問い合わせください。",
+    "restoringSession": "セッションを復元しています。"
   }
 }

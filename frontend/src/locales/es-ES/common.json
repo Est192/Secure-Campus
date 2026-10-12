@@ -146,9 +146,13 @@
   },
   "settings": {
     "eyebrow": "Preferencias del espacio de trabajo", "profileTitle": "Información del perfil",
-    "fullName": "Nombre completo", "email": "Correo universitario", "program": "Programa académico",
-    "programValue": "Grado en Diseño de Interacción", "save": "Guardar cambios",
-    "saved": "Los cambios del perfil se han guardado en esta demostración."
+    "firstName": "Nombre", "lastName": "Apellidos", "email": "Correo universitario",
+    "phone": "Teléfono", "program": "Programa académico", "noProgram": "Sin programa académico",
+    "save": "Guardar cambios", "saving": "Guardando...",
+    "saved": "Se han guardado los cambios del perfil.",
+    "loadError": "No se ha podido cargar tu perfil. Actualiza la página para volver a intentarlo.",
+    "updateError": "No se han podido guardar los cambios del perfil. Inténtalo de nuevo.",
+    "programsError": "No se han podido cargar los programas académicos."
   },
   "help": {
     "eyebrow": "Centro de asistencia", "topicSelected": "Tema de ayuda seleccionado.",
@@ -161,11 +165,16 @@
   },
   "login": {
     "title": "Te damos la bienvenida", "description": "Inicia sesión para acceder a tu espacio del campus.",
-    "mockNotice": "Solo para demostración. El inicio de sesión y el restablecimiento de contraseña no están conectados a un sistema de autenticación.",
+    "mockNotice": "Inicia sesión con tu cuenta del campus. Si necesitas acceso, ponte en contacto con un administrador.",
     "email": "Correo universitario", "password": "Contraseña",
-    "signIn": "Continuar con la demostración", "forgotPassword": "¿Has olvidado tu contraseña?",
+    "signIn": "Iniciar sesión", "forgotPassword": "¿Has olvidado tu contraseña?",
     "resetTitle": "Restablecer contraseña",
-    "resetDescription": "Introduce tu correo universitario para ver la demostración de restablecimiento.",
-    "sendReset": "Continuar", "back": "Volver al inicio de sesión"
+    "resetDescription": "El restablecimiento de contraseña aún no está disponible. Ponte en contacto con un administrador.",
+    "sendReset": "Continuar", "back": "Volver al inicio de sesión",
+    "invalidCredentials": "El correo o la contraseña son incorrectos.",
+    "authError": "No se pudo iniciar sesión. Inténtalo de nuevo.",
+    "logoutError": "El servidor no confirmó el cierre de sesión. Se borró la sesión local.",
+    "resetUnavailable": "El restablecimiento de contraseña aún no está disponible. Ponte en contacto con un administrador.",
+    "restoringSession": "Restaurando tu sesión."
   }
 }

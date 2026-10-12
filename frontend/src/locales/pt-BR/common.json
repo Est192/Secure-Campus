@@ -145,9 +145,13 @@
   },
   "settings": {
     "eyebrow": "Preferências do espaço de trabalho", "profileTitle": "Informações do perfil",
-    "fullName": "Nome completo", "email": "E-mail universitário", "program": "Curso",
-    "programValue": "Bacharelado em Design de Interação", "save": "Salvar alterações",
-    "saved": "Alterações do perfil salvas nesta demonstração."
+    "firstName": "Nome", "lastName": "Sobrenome", "email": "E-mail universitário",
+    "phone": "Telefone", "program": "Curso", "noProgram": "Nenhum curso",
+    "save": "Salvar alterações", "saving": "Salvando...",
+    "saved": "As alterações do perfil foram salvas.",
+    "loadError": "Não foi possível carregar seu perfil. Atualize a página para tentar novamente.",
+    "updateError": "Não foi possível salvar as alterações do perfil. Tente novamente.",
+    "programsError": "Não foi possível carregar os cursos."
   },
   "help": {
     "eyebrow": "Central de suporte", "topicSelected": "Tópico de ajuda selecionado.",
@@ -160,11 +164,16 @@
   },
   "login": {
     "title": "Boas-vindas de volta", "description": "Entre para acessar seu espaço no campus.",
-    "mockNotice": "Apenas demonstração. O acesso e a redefinição de senha não estão conectados a um sistema de autenticação.",
+    "mockNotice": "Entre com sua conta do campus. Se precisar de acesso, entre em contato com um administrador.",
     "email": "E-mail universitário", "password": "Senha",
-    "signIn": "Continuar demonstração", "forgotPassword": "Esqueceu a senha?",
+    "signIn": "Entrar", "forgotPassword": "Esqueceu a senha?",
     "resetTitle": "Redefinir senha",
-    "resetDescription": "Digite seu e-mail universitário para ver a demonstração de redefinição.",
-    "sendReset": "Continuar", "back": "Voltar para entrar"
+    "resetDescription": "A redefinição de senha ainda não está disponível. Entre em contato com um administrador.",
+    "sendReset": "Continuar", "back": "Voltar para entrar",
+    "invalidCredentials": "O e-mail ou a senha estão incorretos.",
+    "authError": "Não foi possível entrar agora. Tente novamente.",
+    "logoutError": "O servidor não confirmou a saída. Sua sessão local foi removida.",
+    "resetUnavailable": "A redefinição de senha ainda não está disponível. Entre em contato com um administrador.",
+    "restoringSession": "Restaurando sua sessão."
   }
 }

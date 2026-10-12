@@ -1,18 +1,50 @@
 import { useState, type FormEvent } from "react";
+import axios from "axios";
 import { ArrowLeft, LogIn, ShieldCheck } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/ui/button";
+import { useAuth } from "../../context/AuthContext";
 
 export function LoginPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { user, isRestoring, login } = useAuth();
   const [showReset, setShowReset] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    navigate("/");
+    setError("");
+    if (showReset) {
+      setError(t("login.resetUnavailable"));
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await login({ email, password, device_name: "SecureCampus web" });
+      const state = location.state as { from?: { pathname?: string } } | null;
+      navigate(state?.from?.pathname ?? "/", { replace: true });
+    } catch (requestError: unknown) {
+      setError(
+        axios.isAxiosError(requestError) && requestError.response?.status === 422
+          ? t("login.invalidCredentials")
+          : t("login.authError"),
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
+
+  if (isRestoring) {
+    return <div aria-live="polite" className="sr-only" role="status">{t("login.restoringSession")}</div>;
+  }
+  if (user) return <Navigate replace to="/" />;
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-50 p-5">
@@ -58,8 +90,10 @@ export function LoginPage() {
               <input
                 autoComplete="email"
                 className="rounded-lg border border-slate-200 p-3 text-sm font-normal outline-none focus:border-blue-500"
+                onChange={(event) => setEmail(event.target.value)}
                 required
                 type="email"
+                value={email}
               />
             </label>
             {!showReset && (
@@ -68,12 +102,19 @@ export function LoginPage() {
                 <input
                   autoComplete="current-password"
                   className="rounded-lg border border-slate-200 p-3 text-sm font-normal outline-none focus:border-blue-500"
+                  onChange={(event) => setPassword(event.target.value)}
                   required
                   type="password"
+                  value={password}
                 />
               </label>
             )}
-            <Button className="mt-1 w-full" type="submit">
+            {error && (
+              <p aria-live="assertive" className="rounded-lg bg-rose-50 px-3 py-2 text-xs text-rose-800" role="alert">
+                {error}
+              </p>
+            )}
+            <Button className="mt-1 w-full" disabled={isSubmitting} type="submit">
               {showReset ? (
                 t("login.sendReset")
               ) : (

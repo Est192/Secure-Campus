@@ -22,7 +22,7 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import type { SupportedLanguage } from "../../i18n";
 import { languageNames, supportedLanguages } from "../../i18n";
-import { campusService } from "../../services/mock/campusService";
+import { useAuth } from "../../context/AuthContext";
 
 const navigation = [
   {
@@ -56,11 +56,23 @@ const navigation = [
 export function CampusLayout() {
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [toast, setToast] = useState("");
-  const profile = campusService.getProfile();
+  const profileName = user?.name || [user?.first_name, user?.last_name].filter(Boolean).join(" ");
+  const profileInitials = [user?.first_name?.[0], user?.last_name?.[0]]
+    .filter(Boolean)
+    .join("")
+    .toUpperCase() || profileName.split(/\s+/).map((part) => part[0]).slice(0, 2).join("").toUpperCase();
+  const profileRoleKey = user?.role?.name === "Administrator"
+    ? "roles.admin"
+    : user?.role?.name === "Teacher"
+      ? "roles.teacher"
+      : user?.role?.name === "Department Head"
+        ? "roles.head"
+        : "roles.student";
 
   function notify(message: string) {
     setToast(message);
@@ -163,11 +175,11 @@ export function CampusLayout() {
 
         <div className="mb-4 flex items-center gap-3 rounded-xl bg-slate-50 p-3">
           <span className="flex size-9 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-800">
-            {profile.initials}
+            {profileInitials}
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-xs font-semibold">{profile.name}</span>
-            <span className="block truncate text-[11px] text-slate-500">{t(profile.roleKey)}</span>
+            <span className="block truncate text-xs font-semibold">{profileName}</span>
+            <span className="block truncate text-[11px] text-slate-500">{t(profileRoleKey)}</span>
           </span>
         </div>
       </aside>
@@ -255,22 +267,27 @@ export function CampusLayout() {
                 }}
               >
                 <span className="flex size-8 items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-blue-800">
-                  {profile.initials}
+                  {profileInitials}
                 </span>
                 <ChevronDown aria-hidden="true" size={15} />
               </button>
               {profileOpen && (
                 <div className="absolute right-0 top-12 z-50 w-64 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl">
                   <div className="border-b border-slate-100 px-3 py-3">
-                    <p className="text-sm font-semibold">{profile.name}</p>
-                    <p className="mt-1 truncate text-xs text-slate-500">{profile.email}</p>
-                    <p className="mt-1 text-xs text-slate-500">{t(profile.roleKey)}</p>
+                    <p className="text-sm font-semibold">{profileName}</p>
+                    <p className="mt-1 truncate text-xs text-slate-500">{user?.email}</p>
+                    <p className="mt-1 text-xs text-slate-500">{t(profileRoleKey)}</p>
                   </div>
                   <button
                     className="flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50"
-                    onClick={() => {
+                    onClick={async () => {
                       setProfileOpen(false);
-                      navigate("/login");
+                      try {
+                        await logout();
+                      } catch {
+                        notify(t("login.logoutError"));
+                      }
+                      navigate("/login", { replace: true });
                     }}
                   >
                     <LogOut aria-hidden="true" size={16} />

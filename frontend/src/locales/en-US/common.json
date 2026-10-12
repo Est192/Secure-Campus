@@ -299,12 +299,18 @@
   "settings": {
     "eyebrow": "Workspace preferences",
     "profileTitle": "Profile information",
-    "fullName": "Full name",
+    "firstName": "First name",
+    "lastName": "Last name",
     "email": "University email",
+    "phone": "Phone",
     "program": "Program",
-    "programValue": "BSc Interaction Design",
+    "noProgram": "No degree program",
     "save": "Save changes",
-    "saved": "Profile changes saved in this demo."
+    "saving": "Saving...",
+    "saved": "Profile changes saved.",
+    "loadError": "Unable to load your profile. You can retry by refreshing the page.",
+    "updateError": "Unable to save your profile changes. Please try again.",
+    "programsError": "Unable to load degree programs."
   },
   "help": {
     "eyebrow": "Support center",
@@ -331,14 +337,19 @@
   "login": {
     "title": "Welcome back",
     "description": "Sign in to access your campus workspace.",
-    "mockNotice": "Demonstration only. Sign-in and password reset are not connected to authentication.",
+    "mockNotice": "Sign in with your campus account. Contact a campus administrator if you need access.",
     "email": "University email",
     "password": "Password",
-    "signIn": "Continue to demonstration",
+    "signIn": "Sign in",
     "forgotPassword": "Forgot password?",
     "resetTitle": "Reset your password",
-    "resetDescription": "Enter your university email to see the password reset demonstration.",
+    "resetDescription": "Password reset is not available yet. Contact a campus administrator for help.",
     "sendReset": "Continue",
-    "back": "Back to sign in"
+    "back": "Back to sign in",
+    "invalidCredentials": "The email or password is incorrect.",
+    "authError": "Unable to sign in right now. Please try again.",
+    "logoutError": "The server could not confirm sign out. Your local session was cleared.",
+    "resetUnavailable": "Password reset is not available yet. Contact a campus administrator for help.",
+    "restoringSession": "Restoring your session."
   }
 }
