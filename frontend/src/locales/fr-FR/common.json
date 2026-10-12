@@ -117,6 +117,39 @@
     "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
     "emailAlex": "alex.romero@securecampus.edu"
   },
+  "peoplePage": {
+    "tabs": { "label": "Catégories de personnes", "all": "Tous les utilisateurs", "students": "Étudiants", "teachers": "Enseignants" },
+    "addPerson": "Ajouter une personne", "role": "Rôle", "selectRole": "Choisissez un rôle",
+    "selectRoleError": "Choisissez un rôle valide pour créer l’utilisateur.", "loadingRoles": "Chargement des rôles...",
+    "search": "Rechercher par nom ou e-mail", "loading": "Chargement des personnes...",
+    "managerOnly": "Seuls les administrateurs et responsables de département peuvent consulter les annuaires des étudiants et enseignants.",
+    "empty": "Aucune personne trouvée.", "name": "Nom", "email": "E-mail",
+    "identifier": "Numéro étudiant ou employé", "status": "Statut", "allStatuses": "Tous les statuts", "active": "Actif",
+    "inactive": "Inactif", "suspended": "Suspendu", "firstName": "Prénom", "lastName": "Nom",
+    "password": "Mot de passe temporaire (12 caractères minimum)", "phone": "Téléphone",
+    "studentNumber": "Numéro étudiant", "employeeNumber": "Numéro d’employé",
+    "save": "Créer la personne", "saving": "Création..."
+  },
+  "dataTable": { "range": "Affichage de {{from}} à {{to}} sur {{total}}", "page": "Page {{current}} sur {{last}}", "previous": "Précédent", "next": "Suivant" },
+  "documentPage": {
+    "upload": "Importer un document", "loading": "Chargement des documents...", "empty": "Aucun document n’a encore été importé.",
+    "view": "Afficher les détails du document", "download": "Télécharger le document", "delete": "Supprimer le document",
+    "confirmDelete": "Supprimer « {{title}} » ? Cette action est irréversible.", "details": "Détails du document",
+    "title": "Titre", "category": "Catégorie", "filename": "Nom du fichier d’origine", "type": "Type de fichier",
+    "size": "Taille", "uploaded": "Importé le", "noDetails": "Aucun détail supplémentaire",
+    "chooseFile": "Choisissez un document à importer", "fileRules": "PDF, PNG, JPG, DOC ou DOCX ; 10 Mo maximum",
+    "uploading": "Importation...", "uploadProgress": "Progression de l’importation"
+  },
+  "requestPage": {
+    "newRequest": "Nouvelle demande", "loading": "Chargement des demandes...", "empty": "Aucune demande trouvée.",
+    "filterStatus": "Filtrer par statut", "allStatuses": "Tous les statuts", "status": "Statut",
+    "statuses": { "Pending": "En attente", "UnderReview": "En cours d’examen", "Approved": "Approuvée", "Rejected": "Rejetée" },
+    "type": "Type de demande", "title": "Titre", "description": "Description", "submit": "Envoyer la demande",
+    "saving": "Enregistrement...", "save": "Enregistrer les modifications", "details": "Détails de la demande",
+    "submitted": "Soumise le", "reviewNotes": "Notes d’examen", "view": "Afficher les détails de la demande",
+    "edit": "Modifier la demande", "delete": "Supprimer la demande",
+    "confirmDelete": "Supprimer « {{title}} » ? Cette action est irréversible."
+  },
   "profile": { "name": "Olivia Martin", "firstName": "Olivia" },
   "notifications": {
     "title": "Notifications", "message": "Vous avez 3 actualités du campus non lues.",

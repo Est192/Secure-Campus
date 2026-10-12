@@ -117,6 +117,39 @@
     "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
     "emailAlex": "alex.romero@securecampus.edu"
   },
+  "peoplePage": {
+    "tabs": { "label": "利用者のカテゴリ", "all": "すべてのユーザー", "students": "学生", "teachers": "教員" },
+    "addPerson": "利用者を追加", "role": "役割", "selectRole": "役割を選択",
+    "selectRoleError": "ユーザーを作成するには有効な役割を選択してください。", "loadingRoles": "役割を読み込み中...",
+    "search": "名前またはメールで検索", "loading": "利用者を読み込み中...",
+    "managerOnly": "学生および教員の名簿を表示できるのは管理者と学部長のみです。",
+    "empty": "利用者が見つかりません。", "name": "名前", "email": "メール",
+    "identifier": "学生番号または職員番号", "status": "状態", "allStatuses": "すべての状態", "active": "有効",
+    "inactive": "無効", "suspended": "停止中", "firstName": "名", "lastName": "姓",
+    "password": "仮パスワード（12文字以上）", "phone": "電話番号",
+    "studentNumber": "学生番号", "employeeNumber": "職員番号",
+    "save": "利用者を作成", "saving": "作成中..."
+  },
+  "dataTable": { "range": "{{total}}件中 {{from}}～{{to}}件を表示", "page": "{{current}} / {{last}}ページ", "previous": "前へ", "next": "次へ" },
+  "documentPage": {
+    "upload": "書類をアップロード", "loading": "書類を読み込み中...", "empty": "アップロードされた書類はありません。",
+    "view": "書類の詳細を表示", "download": "書類をダウンロード", "delete": "書類を削除",
+    "confirmDelete": "「{{title}}」を削除しますか？この操作は取り消せません。", "details": "書類の詳細",
+    "title": "タイトル", "category": "カテゴリ", "filename": "元のファイル名", "type": "ファイル形式",
+    "size": "ファイルサイズ", "uploaded": "アップロード日時", "noDetails": "追加情報はありません",
+    "chooseFile": "アップロードする書類を選択", "fileRules": "PDF、PNG、JPG、DOC、DOCX（最大10 MB）",
+    "uploading": "アップロード中...", "uploadProgress": "アップロードの進行状況"
+  },
+  "requestPage": {
+    "newRequest": "新しい申請", "loading": "申請を読み込み中...", "empty": "申請が見つかりません。",
+    "filterStatus": "状態で絞り込む", "allStatuses": "すべての状態", "status": "状態",
+    "statuses": { "Pending": "保留中", "UnderReview": "確認中", "Approved": "承認済み", "Rejected": "却下" },
+    "type": "申請の種類", "title": "タイトル", "description": "説明", "submit": "申請を送信",
+    "saving": "保存中...", "save": "変更を保存", "details": "申請の詳細",
+    "submitted": "申請日", "reviewNotes": "審査メモ", "view": "申請の詳細を表示",
+    "edit": "申請を編集", "delete": "申請を削除",
+    "confirmDelete": "「{{title}}」を削除しますか？この操作は取り消せません。"
+  },
   "profile": { "name": "オリビア・マーティン", "firstName": "オリビア" },
   "notifications": {
     "title": "通知", "message": "未読のキャンパス更新が3件あります。",

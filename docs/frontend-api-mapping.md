@@ -1,9 +1,10 @@
 # SecureCampus Frontend-to-API Mapping
 
 This document maps the current frontend routes and interactive surfaces to the
-available Laravel API. It is an integration reference only; it does not mean
-the frontend is currently connected to these endpoints. The UI still reads
-mock data and several views have no corresponding backend endpoint.
+available Laravel API and is the source of truth for frontend integration.
+Authentication, the people directory, document management, requests, and
+profile settings are connected to their listed endpoints. Other mock-backed
+surfaces remain unchanged unless stated below.
 
 Base URL: `http://localhost:8080`
 
@@ -42,9 +43,9 @@ For document uploads, use `multipart/form-data` instead of JSON.
 | Sign out in profile menu | `/api/v1/auth/logout` | POST | `EmptyRequest` | `LogoutResponse` |
 | Forgot password / reset form | No endpoint available | — | — | — |
 
-The login UI currently navigates to the dashboard without calling the login
-endpoint. Sign out currently navigates to `/login` without revoking the token.
-The backend does not provide password-reset endpoints.
+The login form and sign-out action use the listed endpoints. Session tokens and
+the authenticated user are persisted in browser local storage. The backend
+does not provide password-reset endpoints.
 
 ### Shared application layout
 
@@ -118,9 +119,10 @@ clients do not submit the average.
 | Download document | `/api/v1/documents/{documentId}/download` | GET | `EmptyRequest` | `BinaryFileResponse` |
 | Delete document | `/api/v1/documents/{documentId}` | DELETE | `EmptyRequest` | `NoContent` |
 
-The UI upload dialog currently only tracks a selected filename and does not
-submit the file. The API accepts PDF, PNG, JPG/JPEG, DOC, or DOCX files up to
-10 MB. Document update is not currently supported by the API.
+The document page lists and displays document metadata, uploads multipart files
+with progress, downloads the stored file, and deletes documents. The API
+accepts PDF, PNG, JPG/JPEG, DOC, or DOCX files up to 10 MB. Document update is
+not currently supported by the API.
 
 ### Requests — `/requests`
 
@@ -135,6 +137,10 @@ submit the file. The API accepts PDF, PNG, JPG/JPEG, DOC, or DOCX files up to
 
 Valid workflow: Pending → Under Review or Rejected; Under Review → Approved
 or Rejected. Approved and Rejected are terminal statuses.
+
+The requests page supports creation, details, edits for a user's own Pending
+requests, manager status transitions, and manager deletion. Status options use
+the backend's exact capitalization.
 
 ### Groups — `/groups`
 
@@ -157,15 +163,18 @@ organization endpoint.
 | People directory | `/api/v1/users` | GET | `UserListQuery` | `Paginated<UserDto>` |
 | Students directory | `/api/v1/students` | GET | `UserListQuery` | `Paginated<UserDto>` |
 | Teachers directory | `/api/v1/teachers` | GET | `UserListQuery` | `Paginated<UserDto>` |
+| Role selector (administrator create-user form) | `/api/v1/roles` | GET | `ListQuery` | `Paginated<RoleDto>` |
 | Create user dialog | `/api/v1/users` | POST | `CreateUserDto` | `Resource<UserDto>` |
 | Create student | `/api/v1/students` | POST | `CreateStudentDto` | `Resource<UserDto>` |
 | Create teacher | `/api/v1/teachers` | POST | `CreateTeacherDto` | `Resource<UserDto>` |
 | User detail | `/api/v1/users/{userId}` | GET | `EmptyRequest` | `Resource<UserDto>` |
 
-Role-specific student and teacher endpoints are manager-only for collection
-reads and writes. The people page currently uses generic mock people and its
-create-user dialog has no role selector; connect it to `/users` only when the
-user role is supplied by a suitable form or other trusted workflow.
+The people page has All Users, Students, and Teachers tabs with server-side
+search and pagination. Role-specific student and teacher endpoints are
+manager-only for collection reads and writes. Administrator creation uses the
+roles collection to supply the required `role_id` to `/users`; student and
+teacher creation uses their role-specific endpoints. Directory views show an
+access message instead of issuing role-specific calls for non-managers.
 
 ### Reports — `/reports`
 

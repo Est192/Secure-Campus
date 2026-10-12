@@ -13,6 +13,10 @@ PostgreSQL do not need to be installed on the host.
 
 ## Installation
 
+The only requirement for local development is Docker Desktop (or Docker Engine
+with Compose) running on your computer. No local PHP, Composer, Node.js,
+database, or manual `.env` setup is needed.
+
 On Windows PowerShell:
 
 ```powershell
@@ -23,20 +27,22 @@ On Windows PowerShell:
 On macOS or Linux:
 
 ```sh
-./scripts/install.sh
-./scripts/start.sh
+sh ./scripts/install.sh
+sh ./scripts/start.sh
 ```
 
 The installer creates a root `.env` from `.env.example` if one does not exist.
-For a local installation, the example database password is sufficient to get
-started. Change it to a unique secret before deploying beyond a trusted local
-environment.
+The local example settings work as-is; change the database password and other
+secrets before deploying beyond a trusted local environment.
 
 You can also start the complete development stack directly:
 
 ```sh
 docker compose up -d --build
 ```
+
+This command also works on a fresh checkout without first running the
+installer; Compose uses the local development defaults in `docker-compose.yml`.
 
 The application generates and persists a Laravel application key on first
 startup when `APP_KEY` is blank. It automatically runs pending migrations
@@ -51,9 +57,10 @@ before starting PHP-FPM.
 
 The frontend includes a dashboard and sections for academics, grades,
 documents, requests, people, groups, reports, calendar, settings, and help.
-These screens currently use in-memory sample data and demonstration-only
-actions; changes are not persisted. The login and password-reset screens are
-also placeholders and are not connected to authentication.
+The people, documents, requests, and profile settings surfaces use the Laravel
+API; several other sections still use in-memory sample data and
+demonstration-only actions. Login and logout use the API. Password reset is
+not available in the backend.
 
 Frontend source changes are available through the Vite server immediately.
 Backend changes are bind-mounted into the PHP container. The node container

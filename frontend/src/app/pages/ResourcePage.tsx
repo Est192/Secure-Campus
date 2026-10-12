@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import { useOutletContext, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { PeoplePage } from "./PeoplePage";
+import { DocumentsPage } from "./DocumentsPage";
+import { RequestsPage } from "./RequestsPage";
 import { RecordList } from "../../components/data-display/RecordList";
 import { ActionDialog } from "../../components/dialogs/ActionDialog";
 import { Button } from "../../components/ui/button";
@@ -59,17 +62,31 @@ const sections: Record<
 
 export function ResourcePage() {
   const { section = "" } = useParams();
-  const { t } = useTranslation();
   const { notify } = useOutletContext<LayoutContext>();
   const config = sections[section];
+
+  if (section === "people") return <PeoplePage />;
+  if (section === "documents") return <DocumentsPage />;
+  if (section === "requests") return <RequestsPage />;
+  if (!config) return null;
+
+  return <MockResourcePage config={config} notify={notify} />;
+}
+
+function MockResourcePage({
+  config,
+  notify,
+}: {
+  config: (typeof sections)[string];
+  notify: LayoutContext["notify"];
+}) {
+  const { t } = useTranslation();
   const [rows, setRows] = useState<MockRecord[]>([]);
   const [action, setAction] = useState("");
 
   useEffect(() => {
-    void campusService.getRecords(config?.dataKey ?? "").then(setRows);
-  }, [config?.dataKey]);
-
-  if (!config) return null;
+    void campusService.getRecords(config.dataKey ?? "").then(setRows);
+  }, [config.dataKey]);
 
   return (
     <>

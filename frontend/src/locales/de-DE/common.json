@@ -117,6 +117,39 @@
     "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
     "emailAlex": "alex.romero@securecampus.edu"
   },
+  "peoplePage": {
+    "tabs": { "label": "Personenkategorien", "all": "Alle Benutzer", "students": "Studierende", "teachers": "Lehrkräfte" },
+    "addPerson": "Person hinzufügen", "role": "Rolle", "selectRole": "Rolle auswählen",
+    "selectRoleError": "Wählen Sie eine gültige Rolle für den Benutzer aus.", "loadingRoles": "Rollen werden geladen...",
+    "search": "Nach Name oder E-Mail suchen", "loading": "Personen werden geladen...",
+    "managerOnly": "Nur Administratoren und Fachbereichsleitungen können Studierenden- und Lehrkräfteverzeichnisse anzeigen.",
+    "empty": "Keine Personen gefunden.", "name": "Name", "email": "E-Mail",
+    "identifier": "Studierenden- oder Personalnummer", "status": "Status", "allStatuses": "Alle Status", "active": "Aktiv",
+    "inactive": "Inaktiv", "suspended": "Gesperrt", "firstName": "Vorname", "lastName": "Nachname",
+    "password": "Temporäres Passwort (mindestens 12 Zeichen)", "phone": "Telefon",
+    "studentNumber": "Matrikelnummer", "employeeNumber": "Personalnummer",
+    "save": "Person erstellen", "saving": "Wird erstellt..."
+  },
+  "dataTable": { "range": "{{from}}–{{to}} von {{total}}", "page": "Seite {{current}} von {{last}}", "previous": "Zurück", "next": "Weiter" },
+  "documentPage": {
+    "upload": "Dokument hochladen", "loading": "Dokumente werden geladen...", "empty": "Es wurden noch keine Dokumente hochgeladen.",
+    "view": "Dokumentdetails anzeigen", "download": "Dokument herunterladen", "delete": "Dokument löschen",
+    "confirmDelete": "„{{title}}“ löschen? Dieser Vorgang kann nicht rückgängig gemacht werden.", "details": "Dokumentdetails",
+    "title": "Titel", "category": "Kategorie", "filename": "Originaldateiname", "type": "Dateityp",
+    "size": "Dateigröße", "uploaded": "Hochgeladen am", "noDetails": "Keine weiteren Details",
+    "chooseFile": "Dokument zum Hochladen auswählen", "fileRules": "PDF, PNG, JPG, DOC oder DOCX; maximal 10 MB",
+    "uploading": "Wird hochgeladen...", "uploadProgress": "Upload-Fortschritt"
+  },
+  "requestPage": {
+    "newRequest": "Neue Anfrage", "loading": "Anfragen werden geladen...", "empty": "Keine Anfragen gefunden.",
+    "filterStatus": "Nach Status filtern", "allStatuses": "Alle Status", "status": "Status",
+    "statuses": { "Pending": "Ausstehend", "UnderReview": "In Prüfung", "Approved": "Genehmigt", "Rejected": "Abgelehnt" },
+    "type": "Anfragetyp", "title": "Titel", "description": "Beschreibung", "submit": "Anfrage senden",
+    "saving": "Wird gespeichert...", "save": "Änderungen speichern", "details": "Anfragedetails",
+    "submitted": "Eingereicht am", "reviewNotes": "Prüfnotizen", "view": "Anfragedetails anzeigen",
+    "edit": "Anfrage bearbeiten", "delete": "Anfrage löschen",
+    "confirmDelete": "„{{title}}“ löschen? Dieser Vorgang kann nicht rückgängig gemacht werden."
+  },
   "profile": { "name": "Olivia Martin", "firstName": "Olivia" },
   "notifications": {
     "title": "Benachrichtigungen", "message": "Sie haben 3 ungelesene Campusmeldungen.",

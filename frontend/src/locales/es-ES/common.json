@@ -118,6 +118,39 @@
     "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
     "emailAlex": "alex.romero@securecampus.edu"
   },
+  "peoplePage": {
+    "tabs": { "label": "Categorías de personas", "all": "Todos los usuarios", "students": "Estudiantes", "teachers": "Docentes" },
+    "addPerson": "Añadir persona", "role": "Rol", "selectRole": "Elige un rol",
+    "selectRoleError": "Elige un rol válido para crear el usuario.", "loadingRoles": "Cargando roles...",
+    "search": "Buscar por nombre o correo", "loading": "Cargando personas...",
+    "managerOnly": "Solo administradores y jefes de departamento pueden ver los directorios de estudiantes y docentes.",
+    "empty": "No se encontraron personas.", "name": "Nombre", "email": "Correo electrónico",
+    "identifier": "Número de estudiante o empleado", "status": "Estado", "allStatuses": "Todos los estados", "active": "Activo",
+    "inactive": "Inactivo", "suspended": "Suspendido", "firstName": "Nombre", "lastName": "Apellido",
+    "password": "Contraseña temporal (mínimo 12 caracteres)", "phone": "Teléfono",
+    "studentNumber": "Número de estudiante", "employeeNumber": "Número de empleado",
+    "save": "Crear persona", "saving": "Creando..."
+  },
+  "dataTable": { "range": "Mostrando {{from}}–{{to}} de {{total}}", "page": "Página {{current}} de {{last}}", "previous": "Anterior", "next": "Siguiente" },
+  "documentPage": {
+    "upload": "Subir documento", "loading": "Cargando documentos...", "empty": "Aún no se han subido documentos.",
+    "view": "Ver detalles del documento", "download": "Descargar documento", "delete": "Eliminar documento",
+    "confirmDelete": "¿Eliminar “{{title}}”? Esta acción no se puede deshacer.", "details": "Detalles del documento",
+    "title": "Título", "category": "Categoría", "filename": "Nombre original", "type": "Tipo de archivo",
+    "size": "Tamaño", "uploaded": "Fecha de carga", "noDetails": "Sin detalles adicionales",
+    "chooseFile": "Elige un documento para subir", "fileRules": "PDF, PNG, JPG, DOC o DOCX; máximo 10 MB",
+    "uploading": "Subiendo...", "uploadProgress": "Progreso de carga"
+  },
+  "requestPage": {
+    "newRequest": "Nueva solicitud", "loading": "Cargando solicitudes...", "empty": "No se encontraron solicitudes.",
+    "filterStatus": "Filtrar por estado", "allStatuses": "Todos los estados", "status": "Estado",
+    "statuses": { "Pending": "Pendiente", "UnderReview": "En revisión", "Approved": "Aprobada", "Rejected": "Rechazada" },
+    "type": "Tipo de solicitud", "title": "Título", "description": "Descripción", "submit": "Enviar solicitud",
+    "saving": "Guardando...", "save": "Guardar cambios", "details": "Detalles de la solicitud",
+    "submitted": "Enviada", "reviewNotes": "Notas de revisión", "view": "Ver detalles de la solicitud",
+    "edit": "Editar solicitud", "delete": "Eliminar solicitud",
+    "confirmDelete": "¿Eliminar “{{title}}”? Esta acción no se puede deshacer."
+  },
   "profile": { "name": "Olivia Martin", "firstName": "Olivia" },
   "notifications": {
     "title": "Notificaciones", "message": "Tienes 3 novedades del campus sin leer.",

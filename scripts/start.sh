@@ -2,7 +2,7 @@
 set -eu
 
 if [ ! -f .env ]; then
-    "$(dirname "$0")/install.sh"
+    sh "$(dirname "$0")/install.sh"
 fi
 
 docker compose up --build --detach
