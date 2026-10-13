@@ -92,9 +92,16 @@ datasets.
 | Related student enrollments | `/api/v1/enrollments` | GET | `EnrollmentListQuery` | `Paginated<EnrollmentDto>` |
 | Browse courses dialog | No separate endpoint; use the list endpoints above | GET | `AcademicGroupListQuery` | `Paginated<AcademicGroupDto>` |
 
+<<<<<<< HEAD
 The current academics view renders mock grade rows as course data. The backend
 does not yet define a subject-to-academic-group association, so a complete
 course catalog relationship needs a schema/API decision.
+=======
+The Academics view renders academic groups, subjects, and enrollments as
+separate paginated lists. The backend does not yet define a
+subject-to-academic-group association, so the frontend does not imply a course
+catalog relationship that the API cannot provide.
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
 
 ### Grades — `/grades`
 
@@ -152,7 +159,11 @@ the backend's exact capitalization.
 | Update academic group | `/api/v1/academic-groups/{groupId}` | PATCH | `UpdateAcademicGroupDto` | `Resource<AcademicGroupDto>` |
 | Delete academic group | `/api/v1/academic-groups/{groupId}` | DELETE | `EmptyRequest` | `NoContent` |
 
+<<<<<<< HEAD
 The frontend currently shows student/research clubs. Backend Academic Groups
+=======
+The Groups route is presented as Academic Groups. Backend Academic Groups
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
 represent academic classes, not clubs; there is no student club or
 organization endpoint.
 

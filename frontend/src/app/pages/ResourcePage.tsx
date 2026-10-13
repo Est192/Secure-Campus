@@ -5,6 +5,12 @@ import { useTranslation } from "react-i18next";
 import { PeoplePage } from "./PeoplePage";
 import { DocumentsPage } from "./DocumentsPage";
 import { RequestsPage } from "./RequestsPage";
+<<<<<<< HEAD
+=======
+import { GradesPage } from "./GradesPage";
+import { AcademicGroupsPage } from "./AcademicGroupsPage";
+import { AcademicsPage } from "./AcademicsPage";
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
 import { RecordList } from "../../components/data-display/RecordList";
 import { ActionDialog } from "../../components/dialogs/ActionDialog";
 import { Button } from "../../components/ui/button";
@@ -68,6 +74,12 @@ export function ResourcePage() {
   if (section === "people") return <PeoplePage />;
   if (section === "documents") return <DocumentsPage />;
   if (section === "requests") return <RequestsPage />;
+<<<<<<< HEAD
+=======
+  if (section === "grades") return <GradesPage />;
+  if (section === "groups") return <AcademicGroupsPage />;
+  if (section === "academics") return <AcademicsPage />;
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
   if (!config) return null;
 
   return <MockResourcePage config={config} notify={notify} />;

@@ -43,7 +43,11 @@ const navigation = [
     titleKey: "navigation.management",
     links: [
       { to: "/people", labelKey: "navigation.people", icon: Users },
+<<<<<<< HEAD
       { to: "/groups", labelKey: "navigation.groups", icon: Users },
+=======
+      { to: "/groups", labelKey: "navigation.academicGroups", icon: Users },
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
       {
         to: "/reports",
         labelKey: "navigation.reports",

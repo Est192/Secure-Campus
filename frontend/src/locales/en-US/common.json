@@ -20,6 +20,10 @@
     "management": "Management",
     "people": "People",
     "groups": "Groups",
+<<<<<<< HEAD
+=======
+    "academicGroups": "Academic Groups",
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
     "reports": "Reports",
     "settings": "Settings",
     "help": "Help center",
@@ -165,6 +169,10 @@
     "documents": "Access your official university documents in one place.",
     "requests": "Track forms, approvals, and support requests from campus offices.",
     "groups": "Find student organizations and research communities that match your interests.",
+<<<<<<< HEAD
+=======
+    "academicGroups": "Manage academic classes, programs, instructors, and terms.",
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
     "people": "Connect with advisors, faculty, and members of your campus community.",
     "reports": "Understand progress across your academic journey.",
     "calendar": "Review upcoming courses, appointments, and campus events.",
@@ -179,6 +187,31 @@
     "gradeA": "A",
     "gradeB": "B+"
   },
+<<<<<<< HEAD
+=======
+  "gradesPage": {
+    "create": "Add grade",
+    "loading": "Loading grades...",
+    "empty": "No grades found.",
+    "enrollment": "Enrollment ID",
+    "subject": "Subject ID",
+    "partials": "Partial grades",
+    "final": "Final grade",
+    "average": "Average grade",
+    "details": "Grade details",
+    "view": "View grade details",
+    "save": "Save grade",
+    "saving": "Saving...",
+    "delete": "Delete grade",
+    "confirmDelete": "Delete grade {{id}}? This cannot be undone.",
+    "fields": {
+      "first_partial": "First partial",
+      "second_partial": "Second partial",
+      "third_partial": "Third partial",
+      "final_grade": "Final grade"
+    }
+  },
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
   "gradeTitles": {
     "biology": "Advanced Biology",
     "design": "Interaction Design Studio",
@@ -228,6 +261,52 @@
     "wellnessMembers": "42 members",
     "dataMembers": "61 members"
   },
+<<<<<<< HEAD
+=======
+  "academicGroupsPage": {
+    "title": "Academic groups",
+    "create": "Create academic group",
+    "loading": "Loading academic groups...",
+    "empty": "No academic groups found.",
+    "search": "Search academic groups",
+    "name": "Name",
+    "program": "Degree program",
+    "selectProgram": "Select a degree program",
+    "noPrograms": "No degree programs are available.",
+    "teacher": "Instructor ID",
+    "teacherId": "Instructor ID (optional)",
+    "year": "Academic year",
+    "semester": "Semester",
+    "details": "Academic group details",
+    "view": "View academic group details",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "delete": "Delete academic group",
+    "confirmDelete": "Delete “{{name}}”? This cannot be undone."
+  },
+  "academicsPage": {
+    "tabs": {
+      "label": "Academic data views",
+      "groups": "Academic groups",
+      "subjects": "Subjects",
+      "enrollments": "Enrollments"
+    },
+    "loading": "Loading academic data...",
+    "empty": "No records found.",
+    "name": "Name",
+    "program": "Degree program",
+    "instructor": "Instructor ID",
+    "year": "Academic year",
+    "semester": "Semester",
+    "code": "Code",
+    "description": "Description",
+    "credits": "Credits",
+    "student": "Student ID",
+    "group": "Academic group",
+    "status": "Status",
+    "enrolledAt": "Enrolled on"
+  },
+>>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
   "groupTitles": {
     "research": "Student Research Group",
     "design": "Design Society",
