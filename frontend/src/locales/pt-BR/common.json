@@ -168,11 +168,33 @@
     "uploadStarted": "Envio de documento simulado.", "genericAction": "Esta ação é apenas uma demonstração."
   },
   "reports": {
-    "eyebrow": "Planejamento e insights", "export": "Exportar relatório",
-    "exportReady": "Exportação do relatório preparada", "progressTitle": "Progresso acadêmico",
-    "attendanceTitle": "Frequência por curso", "week": "Semana {{number}}"
+    "eyebrow": "Planejamento e insights", "progressTitle": "Progresso acadêmico",
+    "attendanceTitle": "Frequência por curso",
+    "chartUnavailable": "Os dados dos gráficos não estão disponíveis na API atual.",
+    "tabs": {
+      "label": "Categorias de relatórios", "students": "Estudantes", "teachers": "Professores",
+      "grades": "Notas", "academicGroups": "Grupos acadêmicos"
+    },
+    "managerOnly": "Apenas administradores e chefes de departamento podem ver relatórios.",
+    "loading": "Carregando relatório...", "empty": "Nenhum registro encontrado.",
+    "name": "Nome", "email": "E-mail", "studentNumber": "Matrícula",
+    "employeeNumber": "Número funcional", "program": "Curso", "status": "Status",
+    "subject": "Disciplina", "student": "Estudante", "academicGroup": "Grupo acadêmico",
+    "finalGrade": "Nota final", "averageGrade": "Média", "teacher": "Professor",
+    "year": "Ano letivo", "semester": "Semestre", "enrollments": "Matrículas"
+  },
+  "dashboardData": {
+    "live": "Dados da API em tempo real",
+    "unavailable": "Indisponível",
+    "chartUnavailable": "Os dados dos gráficos não estão disponíveis na API atual.",
+    "activityUnavailable": "A atividade recente não está disponível na API atual.",
+    "scheduleUnavailable": "Os dados da agenda não estão disponíveis na API atual.",
+    "notificationsUnavailable": "As notificações não estão disponíveis na API atual.",
+    "loading": "Carregando dados do painel...",
+    "unavailableData": "Não foi possível carregar os dados do painel."
   },
   "calendar": {
+    "unavailable": "Os dados da agenda não estão disponíveis na API atual.",
     "today": "Próximos eventos", "event1": "Aula de biologia", "event2": "Seminário de pesquisa",
     "event3": "Reunião com orientador", "time1": "9h", "time2": "13h30", "time3": "15h"
   },

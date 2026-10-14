@@ -168,11 +168,33 @@
     "uploadStarted": "Import du document simulé.", "genericAction": "Cette action est uniquement une démonstration."
   },
   "reports": {
-    "eyebrow": "Planification et analyses", "export": "Exporter le rapport",
-    "exportReady": "L’exportation du rapport est prête", "progressTitle": "Progression scolaire",
-    "attendanceTitle": "Présence par cours", "week": "Semaine {{number}}"
+    "eyebrow": "Planification et analyses", "progressTitle": "Progression scolaire",
+    "attendanceTitle": "Présence par cours",
+    "chartUnavailable": "Les données des graphiques ne sont pas disponibles dans l’API actuelle.",
+    "tabs": {
+      "label": "Catégories de rapports", "students": "Étudiants", "teachers": "Enseignants",
+      "grades": "Notes", "academicGroups": "Groupes académiques"
+    },
+    "managerOnly": "Seuls les administrateurs et responsables de département peuvent consulter les rapports.",
+    "loading": "Chargement du rapport...", "empty": "Aucune donnée de rapport trouvée.",
+    "name": "Nom", "email": "E-mail", "studentNumber": "Numéro étudiant",
+    "employeeNumber": "Numéro d’employé", "program": "Programme", "status": "Statut",
+    "subject": "Matière", "student": "Étudiant", "academicGroup": "Groupe académique",
+    "finalGrade": "Note finale", "averageGrade": "Moyenne", "teacher": "Enseignant",
+    "year": "Année universitaire", "semester": "Semestre", "enrollments": "Inscriptions"
+  },
+  "dashboardData": {
+    "live": "Données API en direct",
+    "unavailable": "Indisponible",
+    "chartUnavailable": "Les données des graphiques ne sont pas disponibles dans l’API actuelle.",
+    "activityUnavailable": "Les activités récentes ne sont pas disponibles dans l’API actuelle.",
+    "scheduleUnavailable": "Les données du calendrier ne sont pas disponibles dans l’API actuelle.",
+    "notificationsUnavailable": "Les notifications ne sont pas disponibles dans l’API actuelle.",
+    "loading": "Chargement des données du tableau de bord...",
+    "unavailableData": "Impossible de charger les données du tableau de bord."
   },
   "calendar": {
+    "unavailable": "Les données du calendrier ne sont pas disponibles dans l’API actuelle.",
     "today": "Prochains événements", "event1": "Cours de biologie", "event2": "Séminaire de recherche",
     "event3": "Rendez-vous avec la conseillère", "time1": "9 h", "time2": "13 h 30", "time3": "15 h"
   },

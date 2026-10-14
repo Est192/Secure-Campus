@@ -64,6 +64,7 @@ not need a backend endpoint.
 
 | Frontend Page | API Endpoint | HTTP Method | Request DTO | Response DTO |
 |---|---|---|---|---|
+<<<<<<< HEAD
 | Dashboard user greeting and profile | `/api/v1/users/{userId}` | GET | `EmptyRequest` | `Resource<UserDto>` |
 | Course table / active enrollment data | `/api/v1/enrollments` | GET | `EnrollmentListQuery` | `Paginated<EnrollmentDto>` |
 | Course table subject names | `/api/v1/subjects` | GET | `ListQuery` | `Paginated<SubjectDto>` |
@@ -82,6 +83,26 @@ small datasets, but the API does not currently expose a dashboard summary,
 attendance records, grade history, or activity feed. A dedicated aggregated
 endpoint would be preferable before using these views with production-sized
 datasets.
+=======
+| Dashboard user greeting and profile | Authenticated user session; `/api/v1/users/{userId}` for session restore | GET | `EmptyRequest` | `Resource<UserDto>` |
+| Academic group table and count | `/api/v1/academic-groups` | GET | `AcademicGroupListQuery` | `Paginated<AcademicGroupDto>` |
+| Pending request count | `/api/v1/requests?status=Pending` | GET | `RequestListQuery` | `Paginated<RequestDto>` |
+| Document count | `/api/v1/documents` | GET | `DocumentListQuery` | `Paginated<DocumentDto>` |
+| Attendance and performance chart | No attendance or performance-history endpoint | — | — | — |
+| Recent activity feed | No activity endpoint or persisted activity source | — | — | — |
+| Upcoming schedule | No calendar/event endpoint | — | — | — |
+| Role preview selector | No API call; local-only display state | — | — | — |
+| New request action | Navigate to `/requests`; creation occurs on the Requests page | — | — | — |
+| Course report export | No export endpoint available | — | — | — |
+
+The dashboard derives academic-group, pending-request, and document counts
+from the visible paginated resources. Attendance and performance history,
+activity, and calendar data are not fabricated. The API does not currently
+expose a dashboard summary, attendance records, grade history, or activity
+feed. A proposed endpoint contract is documented in
+[dashboard-summary-proposal.md](./dashboard-summary-proposal.md); no dashboard
+summary endpoint currently exists.
+>>>>>>> sprint-emilio
 
 ### Academics — `/academics`
 
@@ -93,15 +114,21 @@ datasets.
 | Browse courses dialog | No separate endpoint; use the list endpoints above | GET | `AcademicGroupListQuery` | `Paginated<AcademicGroupDto>` |
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 The current academics view renders mock grade rows as course data. The backend
 does not yet define a subject-to-academic-group association, so a complete
 course catalog relationship needs a schema/API decision.
 =======
+=======
+>>>>>>> sprint-emilio
 The Academics view renders academic groups, subjects, and enrollments as
 separate paginated lists. The backend does not yet define a
 subject-to-academic-group association, so the frontend does not imply a course
 catalog relationship that the API cannot provide.
+<<<<<<< HEAD
 >>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
+=======
+>>>>>>> sprint-emilio
 
 ### Grades — `/grades`
 
@@ -160,10 +187,14 @@ the backend's exact capitalization.
 | Delete academic group | `/api/v1/academic-groups/{groupId}` | DELETE | `EmptyRequest` | `NoContent` |
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 The frontend currently shows student/research clubs. Backend Academic Groups
 =======
 The Groups route is presented as Academic Groups. Backend Academic Groups
 >>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
+=======
+The Groups route is presented as Academic Groups. Backend Academic Groups
+>>>>>>> sprint-emilio
 represent academic classes, not clubs; there is no student club or
 organization endpoint.
 
@@ -199,9 +230,16 @@ access message instead of issuing role-specific calls for non-managers.
 | Weekly progress chart | No weekly progress endpoint available | — | — | — |
 | Attendance by subject chart | No attendance endpoint available | — | — | — |
 
+<<<<<<< HEAD
 The current Reports page is entirely hardcoded. The available API report
 endpoints provide paginated records, not the chart aggregates displayed by
 the page.
+=======
+The Reports page displays paginated API records in four report tables.
+Progress and attendance chart areas remain placeholders because the available
+endpoints do not provide chart aggregates. Report endpoints are restricted to
+Administrators and Department Heads.
+>>>>>>> sprint-emilio
 
 ### Calendar — `/calendar`
 

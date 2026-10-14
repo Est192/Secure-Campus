@@ -169,11 +169,33 @@
     "uploadStarted": "Se simuló la carga del documento.", "genericAction": "Esta acción es solo una demostración."
   },
   "reports": {
-    "eyebrow": "Planeación e información", "export": "Exportar informe",
-    "exportReady": "Se preparó la exportación del informe", "progressTitle": "Progreso académico",
-    "attendanceTitle": "Asistencia por curso", "week": "Semana {{number}}"
+    "eyebrow": "Planeación e información", "progressTitle": "Progreso académico",
+    "attendanceTitle": "Asistencia por curso",
+    "chartUnavailable": "Los datos de gráficas no están disponibles en la API actual.",
+    "tabs": {
+      "label": "Categorías de informes", "students": "Estudiantes", "teachers": "Docentes",
+      "grades": "Calificaciones", "academicGroups": "Grupos académicos"
+    },
+    "managerOnly": "Solo administradores y jefes de departamento pueden ver informes.",
+    "loading": "Cargando informe...", "empty": "No se encontraron registros.",
+    "name": "Nombre", "email": "Correo electrónico", "studentNumber": "Número de estudiante",
+    "employeeNumber": "Número de empleado", "program": "Programa académico", "status": "Estado",
+    "subject": "Materia", "student": "Estudiante", "academicGroup": "Grupo académico",
+    "finalGrade": "Calificación final", "averageGrade": "Promedio", "teacher": "Docente",
+    "year": "Año académico", "semester": "Semestre", "enrollments": "Inscripciones"
+  },
+  "dashboardData": {
+    "live": "Datos de API en tiempo real",
+    "unavailable": "No disponible",
+    "chartUnavailable": "Los datos de gráficas no están disponibles en la API actual.",
+    "activityUnavailable": "La actividad reciente no está disponible en la API actual.",
+    "scheduleUnavailable": "La agenda no está disponible en la API actual.",
+    "notificationsUnavailable": "Las notificaciones no están disponibles en la API actual.",
+    "loading": "Cargando datos del panel...",
+    "unavailableData": "No se pudieron cargar los datos del panel."
   },
   "calendar": {
+    "unavailable": "La agenda no está disponible en la API actual.",
     "today": "Próximos eventos", "event1": "Clase de biología", "event2": "Seminario de investigación",
     "event3": "Reunión con asesora", "time1": "9:00 a. m.", "time2": "1:30 p. m.", "time3": "3:00 p. m."
   },

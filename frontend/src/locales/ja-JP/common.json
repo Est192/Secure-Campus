@@ -168,11 +168,33 @@
     "uploadStarted": "書類のアップロードをシミュレートしました。", "genericAction": "この操作はデモ用です。"
   },
   "reports": {
-    "eyebrow": "計画と分析", "export": "レポートをエクスポート",
-    "exportReady": "レポートを準備しました", "progressTitle": "学業の進捗",
-    "attendanceTitle": "科目別出席率", "week": "{{number}}週目"
+    "eyebrow": "計画と分析", "progressTitle": "学業の進捗",
+    "attendanceTitle": "科目別出席率",
+    "chartUnavailable": "現在のAPIではグラフデータを取得できません。",
+    "tabs": {
+      "label": "レポートの種類", "students": "学生", "teachers": "教員",
+      "grades": "成績", "academicGroups": "学術グループ"
+    },
+    "managerOnly": "レポートを表示できるのは管理者と学部責任者のみです。",
+    "loading": "レポートを読み込み中...", "empty": "レポートデータがありません。",
+    "name": "氏名", "email": "メールアドレス", "studentNumber": "学生番号",
+    "employeeNumber": "職員番号", "program": "学位プログラム", "status": "状態",
+    "subject": "科目", "student": "学生", "academicGroup": "学術グループ",
+    "finalGrade": "最終成績", "averageGrade": "平均成績", "teacher": "教員",
+    "year": "学年度", "semester": "学期", "enrollments": "履修登録数"
+  },
+  "dashboardData": {
+    "live": "APIの最新データ",
+    "unavailable": "利用不可",
+    "chartUnavailable": "現在のAPIではグラフデータを取得できません。",
+    "activityUnavailable": "現在のAPIでは最近のアクティビティを取得できません。",
+    "scheduleUnavailable": "現在のAPIではスケジュールを取得できません。",
+    "notificationsUnavailable": "現在のAPIでは通知を取得できません。",
+    "loading": "ダッシュボードデータを読み込み中...",
+    "unavailableData": "ダッシュボードデータを読み込めませんでした。"
   },
   "calendar": {
+    "unavailable": "現在のAPIではスケジュールを取得できません。",
     "today": "今後の予定", "event1": "生物学の講義", "event2": "研究セミナー",
     "event3": "アドバイザー面談", "time1": "午前9時", "time2": "午後1時30分", "time3": "午後3時"
   },

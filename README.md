@@ -56,11 +56,24 @@ before starting PHP-FPM.
 - Laravel's built-in health check: <http://localhost:8080/up>
 
 The frontend includes a dashboard and sections for academics, grades,
+<<<<<<< HEAD
 documents, requests, people, groups, reports, calendar, settings, and help.
 The people, documents, requests, and profile settings surfaces use the Laravel
 API; several other sections still use in-memory sample data and
 demonstration-only actions. Login and logout use the API. Password reset is
 not available in the backend.
+=======
+documents, requests, people, academic groups, reports, calendar, settings,
+and help. Authentication, profile, people, documents, requests, grades,
+academic groups, academics, and reports use the Laravel API. Dashboard counts
+are derived from visible API resources. Attendance, performance history,
+recent activity, notifications, and calendar events remain clearly labeled
+placeholders because the backend does not provide those data sources. A
+proposed dashboard summary contract is documented in
+[docs/dashboard-summary-proposal.md](./docs/dashboard-summary-proposal.md);
+the endpoint has not been implemented. Login and logout use the API. Password
+reset is not available in the backend.
+>>>>>>> sprint-emilio
 
 Frontend source changes are available through the Vite server immediately.
 Backend changes are bind-mounted into the PHP container. The node container

@@ -168,11 +168,33 @@
     "uploadStarted": "Dokument-Upload simuliert.", "genericAction": "Diese Aktion dient nur zur Demonstration."
   },
   "reports": {
-    "eyebrow": "Planung und Einblicke", "export": "Bericht exportieren",
-    "exportReady": "Berichtexport vorbereitet", "progressTitle": "Studienfortschritt",
-    "attendanceTitle": "Anwesenheit nach Kurs", "week": "Woche {{number}}"
+    "eyebrow": "Planung und Einblicke", "progressTitle": "Studienfortschritt",
+    "attendanceTitle": "Anwesenheit nach Kurs",
+    "chartUnavailable": "Diagrammdaten sind über die aktuelle API nicht verfügbar.",
+    "tabs": {
+      "label": "Berichtskategorien", "students": "Studierende", "teachers": "Lehrkräfte",
+      "grades": "Noten", "academicGroups": "Akademische Gruppen"
+    },
+    "managerOnly": "Nur Administratoren und Fachbereichsleitungen können Berichte anzeigen.",
+    "loading": "Bericht wird geladen...", "empty": "Keine Berichtseinträge gefunden.",
+    "name": "Name", "email": "E-Mail", "studentNumber": "Matrikelnummer",
+    "employeeNumber": "Personalnummer", "program": "Studiengang", "status": "Status",
+    "subject": "Fach", "student": "Studierende/r", "academicGroup": "Akademische Gruppe",
+    "finalGrade": "Endnote", "averageGrade": "Durchschnittsnote", "teacher": "Lehrkraft",
+    "year": "Studienjahr", "semester": "Semester", "enrollments": "Einschreibungen"
+  },
+  "dashboardData": {
+    "live": "Live-API-Daten",
+    "unavailable": "Nicht verfügbar",
+    "chartUnavailable": "Diagrammdaten sind über die aktuelle API nicht verfügbar.",
+    "activityUnavailable": "Aktuelle Aktivitäten sind über die aktuelle API nicht verfügbar.",
+    "scheduleUnavailable": "Termindaten sind über die aktuelle API nicht verfügbar.",
+    "notificationsUnavailable": "Benachrichtigungen sind über die aktuelle API nicht verfügbar.",
+    "loading": "Dashboard-Daten werden geladen...",
+    "unavailableData": "Dashboard-Daten konnten nicht geladen werden."
   },
   "calendar": {
+    "unavailable": "Termindaten sind über die aktuelle API nicht verfügbar.",
     "today": "Anstehende Termine", "event1": "Biologievorlesung", "event2": "Forschungsseminar",
     "event3": "Beratungstermin", "time1": "9:00 Uhr", "time2": "13:30 Uhr", "time3": "15:00 Uhr"
   },

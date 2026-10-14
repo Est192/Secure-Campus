@@ -6,16 +6,16 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import type { StatRecord } from "../../types/campus";
+import type { DashboardStat } from "../../types/Dashboard";
 
-const icons: Record<StatRecord["icon"], LucideIcon> = {
+const icons: Record<DashboardStat["icon"], LucideIcon> = {
   attendance: CalendarCheck,
   courses: BookOpen,
   requests: ClipboardList,
   documents: FileText,
 };
 
-export function StatCard({ stat }: { stat: StatRecord }) {
+export function StatCard({ stat }: { stat: DashboardStat }) {
   const { t } = useTranslation();
   const Icon = icons[stat.icon];
 
@@ -26,13 +26,9 @@ export function StatCard({ stat }: { stat: StatRecord }) {
           <Icon aria-hidden="true" size={20} />
         </span>
         <span
-          className={`rounded-full px-2 py-1 text-xs font-medium ${
-            stat.positive === false
-              ? "bg-amber-50 text-amber-800"
-              : "bg-emerald-50 text-emerald-800"
-          }`}
+          className={`rounded-full px-2 py-1 text-xs font-medium ${stat.available ? "bg-emerald-50 text-emerald-800" : "bg-slate-100 text-slate-600"}`}
         >
-          {t(stat.changeKey)}
+          {t(stat.available ? "dashboard.liveData" : "dashboard.unavailable")}
         </span>
       </div>
       <p className="mt-4 text-sm text-slate-600">{t(stat.titleKey)}</p>

@@ -43,11 +43,7 @@ const navigation = [
     titleKey: "navigation.management",
     links: [
       { to: "/people", labelKey: "navigation.people", icon: Users },
-<<<<<<< HEAD
-      { to: "/groups", labelKey: "navigation.groups", icon: Users },
-=======
       { to: "/groups", labelKey: "navigation.academicGroups", icon: Users },
->>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
       {
         to: "/reports",
         labelKey: "navigation.reports",
@@ -140,11 +136,6 @@ export function CampusLayout() {
                   >
                     <Icon aria-hidden="true" size={17} />
                     {t(labelKey)}
-                    {to === "/requests" && (
-                      <span className="ml-auto rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800">
-                        3
-                      </span>
-                    )}
                   </NavLink>
                 ))}
               </div>
@@ -241,21 +232,11 @@ export function CampusLayout() {
                 }}
               >
                 <Bell aria-hidden="true" size={18} />
-                <span className="absolute right-1.5 top-1.5 size-1.5 rounded-full bg-blue-700" />
               </button>
               {notificationsOpen && (
                 <div className="absolute right-0 top-12 z-50 w-72 rounded-2xl border border-slate-200 bg-white p-4 shadow-xl">
                   <h2 className="text-sm font-semibold">{t("notifications.title")}</h2>
-                  <p className="mt-2 text-sm text-slate-600">{t("notifications.message")}</p>
-                  <button
-                    className="mt-3 text-xs font-semibold text-blue-700"
-                    onClick={() => {
-                      setNotificationsOpen(false);
-                      notify(t("notifications.markedRead"));
-                    }}
-                  >
-                    {t("notifications.markAllRead")}
-                  </button>
+                  <p className="mt-2 text-sm text-slate-600">{t("dashboardData.notificationsUnavailable")}</p>
                 </div>
               )}
             </div>

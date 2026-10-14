@@ -20,10 +20,7 @@
     "management": "Management",
     "people": "People",
     "groups": "Groups",
-<<<<<<< HEAD
-=======
     "academicGroups": "Academic Groups",
->>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
     "reports": "Reports",
     "settings": "Settings",
     "help": "Help center",
@@ -156,7 +153,18 @@
     "documents": {
       "title": "Upload a document"
     },
+    "dashboardData": {
+      "live": "Live API data",
+      "unavailable": "Unavailable",
+      "chartUnavailable": "Chart data is not available from the current API.",
+      "activityUnavailable": "Recent activity is not available from the current API.",
+      "scheduleUnavailable": "Schedule data is not available from the current API.",
+      "notificationsUnavailable": "Notifications are not available from the current API.",
+      "loading": "Loading dashboard data...",
+      "unavailableData": "Dashboard data could not be loaded."
+    },
     "calendar": {
+      "unavailable": "Schedule data is not available from the current API.",
       "title": "Browse calendar"
     },
     "academics": {
@@ -169,10 +177,7 @@
     "documents": "Access your official university documents in one place.",
     "requests": "Track forms, approvals, and support requests from campus offices.",
     "groups": "Find student organizations and research communities that match your interests.",
-<<<<<<< HEAD
-=======
     "academicGroups": "Manage academic classes, programs, instructors, and terms.",
->>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
     "people": "Connect with advisors, faculty, and members of your campus community.",
     "reports": "Understand progress across your academic journey.",
     "calendar": "Review upcoming courses, appointments, and campus events.",
@@ -187,8 +192,6 @@
     "gradeA": "A",
     "gradeB": "B+"
   },
-<<<<<<< HEAD
-=======
   "gradesPage": {
     "create": "Add grade",
     "loading": "Loading grades...",
@@ -211,7 +214,6 @@
       "final_grade": "Final grade"
     }
   },
->>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
   "gradeTitles": {
     "biology": "Advanced Biology",
     "design": "Interaction Design Studio",
@@ -261,8 +263,6 @@
     "wellnessMembers": "42 members",
     "dataMembers": "61 members"
   },
-<<<<<<< HEAD
-=======
   "academicGroupsPage": {
     "title": "Academic groups",
     "create": "Create academic group",
@@ -306,7 +306,6 @@
     "status": "Status",
     "enrolledAt": "Enrolled on"
   },
->>>>>>> a540563 (feat: add Brazilian Portuguese localization and initial setup for React app)
   "groupTitles": {
     "research": "Student Research Group",
     "design": "Design Society",
@@ -447,14 +446,48 @@
   },
   "reports": {
     "eyebrow": "Planning and insights",
-    "export": "Export report",
-    "exportReady": "Report export prepared",
     "progressTitle": "Academic progress",
     "attendanceTitle": "Attendance by course",
-    "week": "Week {{number}}"
+    "chartUnavailable": "Chart data is not available from the current API.",
+    "tabs": {
+      "label": "Report categories",
+      "students": "Students",
+      "teachers": "Teachers",
+      "grades": "Grades",
+      "academicGroups": "Academic groups"
+    },
+    "managerOnly": "Only administrators and department heads can view reports.",
+    "loading": "Loading report...",
+    "empty": "No report records found.",
+    "name": "Name",
+    "email": "Email",
+    "studentNumber": "Student number",
+    "employeeNumber": "Employee number",
+    "program": "Degree program",
+    "status": "Status",
+    "subject": "Subject",
+    "student": "Student",
+    "academicGroup": "Academic group",
+    "finalGrade": "Final grade",
+    "averageGrade": "Average grade",
+    "teacher": "Teacher",
+    "year": "Academic year",
+    "semester": "Semester",
+    "enrollments": "Enrollments"
+  },
+  "dashboardData": {
+    "live": "Live API data",
+    "unavailable": "Unavailable",
+    "chartUnavailable": "Chart data is not available from the current API.",
+    "activityUnavailable": "Recent activity is not available from the current API.",
+    "scheduleUnavailable": "Schedule data is not available from the current API.",
+    "notificationsUnavailable": "Notifications are not available from the current API.",
+    "loading": "Loading dashboard data...",
+    "unavailableData": "Dashboard data could not be loaded."
   },
   "calendar": {
     "today": "Upcoming schedule",
+    "unavailable": "Schedule data is not available from the current API.",
     "event1": "Biology lecture",
     "event2": "Research seminar",
     "event3": "Advisor meeting",
