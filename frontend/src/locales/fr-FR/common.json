@@ -1,0 +1,234 @@
+{
+  "app": { "title": "SecureCampus", "homeLabel": "Accueil SecureCampus" },
+  "brand": { "name": "SecureCampus", "tagline": "Plateforme universitaire" },
+  "navigation": {
+    "primary": "Navigation principale", "overview": "Vue d’ensemble", "dashboard": "Tableau de bord",
+    "academic": "Études", "academics": "Études", "grades": "Notes", "documents": "Documents",
+    "requests": "Demandes", "calendar": "Calendrier", "management": "Gestion",
+    "people": "Personnes", "groups": "Groupes", "reports": "Rapports",
+    "settings": "Paramètres", "help": "Centre d’aide", "signOut": "Se déconnecter"
+  },
+  "common": {
+    "close": "Fermer", "closeNavigation": "Fermer la navigation", "openNavigation": "Ouvrir la navigation",
+    "search": "Rechercher dans SecureCampus", "searchPlaceholder": "Rechercher dans SecureCampus",
+    "notifications": "Notifications", "openProfileMenu": "Ouvrir le menu du profil",
+    "viewAll": "Tout afficher", "sampleDataNotice": "Données fictives de démonstration",
+    "openRecord": "Ouvrir {{name}}", "recordSelected": "{{name}} sélectionné", "cancel": "Annuler"
+  },
+  "dashboard": {
+    "eyebrow": "Votre campus en un coup d’œil", "heading": "La sécurité et les opérations du campus, au même endroit.",
+    "description": "Un point de départ clair pour coordonner les services du campus et tenir la communauté informée.",
+    "greeting": "Bonjour {{name}}", "subtitle": "Voici les actualités de votre campus aujourd’hui.",
+    "roleSwitcher": "Choisir un rôle de démonstration", "rolePreview": "Aperçu en tant que {{role}}", "newRequest": "Nouvelle demande",
+    "statistics": "Statistiques du campus"
+  },
+  "language": {
+    "label": "Choisir la langue",
+    "names": { "enUS": "Anglais (États-Unis)", "esMX": "Espagnol (Mexique)", "esES": "Espagnol (Espagne)", "frFR": "Français", "deDE": "Allemand", "ptBR": "Portugais (Brésil)", "jaJP": "Japonais" }
+  },
+  "health": { "title": "État du système", "description": "Connexion en direct à l’API SecureCampus.", "loading": "Vérification de la connexion", "available": "L’application est en ligne", "unavailable": "L’application est indisponible" },
+  "roles": { "student": "Étudiant", "teacher": "Enseignant", "head": "Responsable de département", "admin": "Administrateur" },
+  "stats": {
+    "attendance": "Présence", "attendanceChange": "+2,4 % par rapport au trimestre précédent",
+    "activeCourses": "Cours actifs", "courseChange": "3 devoirs à rendre",
+    "pendingRequests": "Demandes en cours", "pendingChange": "4 nécessitent votre attention",
+    "documents": "Documents", "documentChange": "8 ajoutés ce mois-ci",
+    "completion": "Terminé", "needsAttention": "À examiner"
+  },
+  "performance": { "title": "Résultats scolaires", "subtitle": "Votre progression au fil de l’année", "chartDescription": "Graphique mensuel des résultats scolaires" },
+  "chart": { "months": { "0": "Janv.", "1": "Févr.", "2": "Mars", "3": "Avr.", "4": "Mai", "5": "Juin", "6": "Juil.", "7": "Août", "8": "Sept.", "9": "Oct.", "10": "Nov.", "11": "Déc." } },
+  "activity": {
+    "title": "Activité récente", "subtitle": "Actualités de votre campus",
+    "gradeTitle": "Nouvelle note publiée", "gradeDetail": "Votre note de biologie avancée est disponible",
+    "documentTitle": "Document approuvé", "documentDetail": "Votre attestation d’inscription est prête",
+    "requestTitle": "Demande en cours", "requestDetail": "Votre demande d’aide financière est en cours d’examen",
+    "timeRecent": "Il y a 2 heures", "timeYesterday": "Hier", "timeThisWeek": "Cette semaine", "allOpened": "Toute l’activité est affichée"
+  },
+  "courses": {
+    "title": "Vos cours", "subtitle": "Aperçu du semestre en cours", "export": "Exporter",
+    "exportReady": "Le rapport des cours est prêt", "course": "Cours", "instructor": "Enseignant",
+    "credits": "Crédits", "progress": "Progression", "grade": "Note"
+  },
+  "courseTitles": {
+    "security": "Sécurité avancée", "statistics": "Statistiques appliquées",
+    "networks": "Architecture réseau", "ethics": "Éthique et société",
+    "biology": "Biologie avancée", "design": "Atelier de design d’interaction",
+    "seminar": "Séminaire de recherche"
+  },
+  "instructorNames": { "williams": "Dr A. Williams", "kim": "Pr J. Kim", "patel": "Dr R. Patel", "garcia": "Pr L. Garcia" },
+  "quickActions": {
+    "documents": { "title": "Importer un document" },
+    "calendar": { "title": "Consulter le calendrier" },
+    "academics": { "title": "Consulter les cours" }
+  },
+  "pageDescriptions": {
+    "academics": "Suivez vos cours, vos devoirs et vos ressources pédagogiques.",
+    "grades": "Consultez vos résultats pour le semestre en cours.",
+    "documents": "Retrouvez vos documents universitaires officiels au même endroit.",
+    "requests": "Suivez les formulaires, les approbations et les demandes d’assistance.",
+    "groups": "Trouvez des associations étudiantes et des groupes de recherche.",
+    "people": "Échangez avec les conseillers, les enseignants et la communauté du campus.",
+    "reports": "Suivez votre parcours universitaire.",
+    "calendar": "Consultez les cours, les rendez-vous et les événements à venir.",
+    "help": "Trouvez des réponses et découvrez comment obtenir de l’aide sur le campus."
+  },
+  "grades": { "title": "Notes actuelles", "biology": "94 % au total", "design": "97 % au total", "seminar": "88 % au total", "statistics": "92 % au total", "gradeA": "A", "gradeB": "B+" },
+  "gradeTitles": {
+    "biology": "Biologie avancée", "design": "Atelier de design d’interaction",
+    "seminar": "Séminaire de recherche", "statistics": "Statistiques pour les sciences sociales"
+  },
+  "documents": {
+    "title": "Documents récents", "transcriptDate": "12 octobre 2025",
+    "enrollmentDate": "8 octobre 2025", "scholarshipDate": "2 octobre 2025",
+    "studentIdDate": "28 septembre 2025"
+  },
+  "documentTitles": {
+    "transcript": "Relevé de notes officiel", "enrollment": "Attestation d’inscription",
+    "scholarship": "Lettre de bourse", "studentId": "Confirmation de carte étudiante"
+  },
+  "status": {
+    "approved": "Approuvé", "ready": "Prêt", "processing": "En traitement",
+    "inProgress": "En cours", "scheduled": "Planifié", "submitted": "Envoyé",
+    "active": "Actif", "open": "Ouvert"
+  },
+  "requests": {
+    "title": "Demandes récentes", "updatedYesterday": "Mise à jour hier",
+    "dueSoon": "Échéance : 18 octobre", "appointmentDate": "21 octobre 2025",
+    "submittedDate": "9 octobre 2025"
+  },
+  "requestTitles": {
+    "transcript": "Demande de relevé de notes", "financialAid": "Examen de l’aide financière",
+    "advisor": "Rendez-vous avec un conseiller", "replacement": "Remplacement de carte étudiante"
+  },
+  "groups": {
+    "title": "Groupes du campus", "researchMembers": "24 membres",
+    "designMembers": "86 membres", "wellnessMembers": "42 membres",
+    "dataMembers": "61 membres"
+  },
+  "groupTitles": {
+    "research": "Groupe étudiant de recherche", "design": "Société de design",
+    "wellness": "Cercle de bien-être du campus", "data": "Club de science des données"
+  },
+  "people": {
+    "title": "Annuaire du campus", "maya": "Dr Maya Chen", "james": "James Wilson",
+    "nora": "Nora Patel", "alex": "Alex Romero", "advisor": "Conseillère pédagogique",
+    "departmentHead": "Responsable de département", "instructor": "Enseignant du cours",
+    "studentServices": "Services aux étudiants", "emailMaya": "maya.chen@securecampus.edu",
+    "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
+    "emailAlex": "alex.romero@securecampus.edu"
+  },
+  "peoplePage": {
+    "tabs": { "label": "Catégories de personnes", "all": "Tous les utilisateurs", "students": "Étudiants", "teachers": "Enseignants" },
+    "addPerson": "Ajouter une personne", "role": "Rôle", "selectRole": "Choisissez un rôle",
+    "selectRoleError": "Choisissez un rôle valide pour créer l’utilisateur.", "loadingRoles": "Chargement des rôles...",
+    "search": "Rechercher par nom ou e-mail", "loading": "Chargement des personnes...",
+    "managerOnly": "Seuls les administrateurs et responsables de département peuvent consulter les annuaires des étudiants et enseignants.",
+    "empty": "Aucune personne trouvée.", "name": "Nom", "email": "E-mail",
+    "identifier": "Numéro étudiant ou employé", "status": "Statut", "allStatuses": "Tous les statuts", "active": "Actif",
+    "inactive": "Inactif", "suspended": "Suspendu", "firstName": "Prénom", "lastName": "Nom",
+    "password": "Mot de passe temporaire (12 caractères minimum)", "phone": "Téléphone",
+    "studentNumber": "Numéro étudiant", "employeeNumber": "Numéro d’employé",
+    "save": "Créer la personne", "saving": "Création..."
+  },
+  "dataTable": { "range": "Affichage de {{from}} à {{to}} sur {{total}}", "page": "Page {{current}} sur {{last}}", "previous": "Précédent", "next": "Suivant" },
+  "documentPage": {
+    "upload": "Importer un document", "loading": "Chargement des documents...", "empty": "Aucun document n’a encore été importé.",
+    "view": "Afficher les détails du document", "download": "Télécharger le document", "delete": "Supprimer le document",
+    "confirmDelete": "Supprimer « {{title}} » ? Cette action est irréversible.", "details": "Détails du document",
+    "title": "Titre", "category": "Catégorie", "filename": "Nom du fichier d’origine", "type": "Type de fichier",
+    "size": "Taille", "uploaded": "Importé le", "noDetails": "Aucun détail supplémentaire",
+    "chooseFile": "Choisissez un document à importer", "fileRules": "PDF, PNG, JPG, DOC ou DOCX ; 10 Mo maximum",
+    "uploading": "Importation...", "uploadProgress": "Progression de l’importation"
+  },
+  "requestPage": {
+    "newRequest": "Nouvelle demande", "loading": "Chargement des demandes...", "empty": "Aucune demande trouvée.",
+    "filterStatus": "Filtrer par statut", "allStatuses": "Tous les statuts", "status": "Statut",
+    "statuses": { "Pending": "En attente", "UnderReview": "En cours d’examen", "Approved": "Approuvée", "Rejected": "Rejetée" },
+    "type": "Type de demande", "title": "Titre", "description": "Description", "submit": "Envoyer la demande",
+    "saving": "Enregistrement...", "save": "Enregistrer les modifications", "details": "Détails de la demande",
+    "submitted": "Soumise le", "reviewNotes": "Notes d’examen", "view": "Afficher les détails de la demande",
+    "edit": "Modifier la demande", "delete": "Supprimer la demande",
+    "confirmDelete": "Supprimer « {{title}} » ? Cette action est irréversible."
+  },
+  "profile": { "name": "Olivia Martin", "firstName": "Olivia" },
+  "notifications": {
+    "title": "Notifications", "message": "Vous avez 3 actualités du campus non lues.",
+    "markAllRead": "Tout marquer comme lu", "markedRead": "Notifications marquées comme lues"
+  },
+  "dialogs": {
+    "actions": {
+      "newRequest": "Nouvelle demande", "uploadDocument": "Importer un document",
+      "createGroup": "Créer un groupe", "createUser": "Créer un utilisateur",
+      "browseCourses": "Consulter les cours", "browseCalendar": "Consulter le calendrier",
+      "browseAcademics": "Consulter les études"
+    },
+    "dropFile": "Choisissez un document à importer", "fileTypes": "PDF, DOCX ou PNG ; 10 Mo maximum",
+    "upload": "Importer le document", "titleField": "Titre ou nom", "descriptionField": "Description",
+    "save": "Enregistrer et continuer", "saved": "Modifications enregistrées dans cette démonstration.",
+    "uploadStarted": "Import du document simulé.", "genericAction": "Cette action est uniquement une démonstration."
+  },
+  "reports": {
+    "eyebrow": "Planification et analyses", "progressTitle": "Progression scolaire",
+    "attendanceTitle": "Présence par cours",
+    "chartUnavailable": "Les données des graphiques ne sont pas disponibles dans l’API actuelle.",
+    "tabs": {
+      "label": "Catégories de rapports", "students": "Étudiants", "teachers": "Enseignants",
+      "grades": "Notes", "academicGroups": "Groupes académiques"
+    },
+    "managerOnly": "Seuls les administrateurs et responsables de département peuvent consulter les rapports.",
+    "loading": "Chargement du rapport...", "empty": "Aucune donnée de rapport trouvée.",
+    "name": "Nom", "email": "E-mail", "studentNumber": "Numéro étudiant",
+    "employeeNumber": "Numéro d’employé", "program": "Programme", "status": "Statut",
+    "subject": "Matière", "student": "Étudiant", "academicGroup": "Groupe académique",
+    "finalGrade": "Note finale", "averageGrade": "Moyenne", "teacher": "Enseignant",
+    "year": "Année universitaire", "semester": "Semestre", "enrollments": "Inscriptions"
+  },
+  "dashboardData": {
+    "live": "Données API en direct",
+    "unavailable": "Indisponible",
+    "chartUnavailable": "Les données des graphiques ne sont pas disponibles dans l’API actuelle.",
+    "activityUnavailable": "Les activités récentes ne sont pas disponibles dans l’API actuelle.",
+    "scheduleUnavailable": "Les données du calendrier ne sont pas disponibles dans l’API actuelle.",
+    "notificationsUnavailable": "Les notifications ne sont pas disponibles dans l’API actuelle.",
+    "loading": "Chargement des données du tableau de bord...",
+    "unavailableData": "Impossible de charger les données du tableau de bord."
+  },
+  "calendar": {
+    "unavailable": "Les données du calendrier ne sont pas disponibles dans l’API actuelle.",
+    "today": "Prochains événements", "event1": "Cours de biologie", "event2": "Séminaire de recherche",
+    "event3": "Rendez-vous avec la conseillère", "time1": "9 h", "time2": "13 h 30", "time3": "15 h"
+  },
+  "settings": {
+    "eyebrow": "Préférences de l’espace de travail", "profileTitle": "Informations du profil",
+    "firstName": "Prénom", "lastName": "Nom", "email": "Adresse universitaire",
+    "phone": "Téléphone", "program": "Programme", "noProgram": "Aucun programme",
+    "save": "Enregistrer les modifications", "saving": "Enregistrement...",
+    "saved": "Les modifications du profil ont été enregistrées.",
+    "loadError": "Impossible de charger votre profil. Actualisez la page pour réessayer.",
+    "updateError": "Impossible d’enregistrer les modifications du profil. Veuillez réessayer.",
+    "programsError": "Impossible de charger les programmes."
+  },
+  "help": {
+    "eyebrow": "Centre d’assistance", "topicSelected": "Sujet d’aide sélectionné.",
+    "topics": {
+      "transcript": { "title": "Comment demander un relevé de notes ?", "description": "En savoir plus sur les documents et les approbations." },
+      "grades": { "title": "Comment les notes sont-elles calculées ?", "description": "Consultez votre dossier scolaire." },
+      "support": { "title": "Contacter l’assistance du campus", "description": "Obtenez de l’aide auprès des services aux étudiants." },
+      "privacy": { "title": "Sécurité et confidentialité", "description": "Découvrez comment vos dossiers sont protégés." }
+    }
+  },
+  "login": {
+    "title": "Ravi de vous revoir", "description": "Connectez-vous pour accéder à votre espace de campus.",
+    "mockNotice": "Connectez-vous avec votre compte de campus. Contactez un administrateur si vous avez besoin d’un accès.",
+    "email": "Adresse universitaire", "password": "Mot de passe",
+    "signIn": "Se connecter", "forgotPassword": "Mot de passe oublié ?",
+    "resetTitle": "Réinitialiser le mot de passe",
+    "resetDescription": "La réinitialisation du mot de passe n’est pas encore disponible. Contactez un administrateur.",
+    "sendReset": "Continuer", "back": "Retour à la connexion",
+    "invalidCredentials": "L’adresse e-mail ou le mot de passe est incorrect.",
+    "authError": "Connexion impossible pour le moment. Veuillez réessayer.",
+    "logoutError": "Le serveur n’a pas confirmé la déconnexion. Votre session locale a été supprimée.",
+    "resetUnavailable": "La réinitialisation du mot de passe n’est pas encore disponible. Contactez un administrateur.",
+    "restoringSession": "Restauration de votre session."
+  }
+}

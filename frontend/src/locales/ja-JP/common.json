@@ -1,0 +1,234 @@
+{
+  "app": { "title": "SecureCampus", "homeLabel": "SecureCampus ホーム" },
+  "brand": { "name": "SecureCampus", "tagline": "大学向けプラットフォーム" },
+  "navigation": {
+    "primary": "メインナビゲーション", "overview": "概要", "dashboard": "ダッシュボード",
+    "academic": "学業", "academics": "学業", "grades": "成績", "documents": "書類",
+    "requests": "申請", "calendar": "カレンダー", "management": "管理",
+    "people": "ユーザー", "groups": "グループ", "reports": "レポート",
+    "settings": "設定", "help": "ヘルプセンター", "signOut": "サインアウト"
+  },
+  "common": {
+    "close": "閉じる", "closeNavigation": "ナビゲーションを閉じる", "openNavigation": "ナビゲーションを開く",
+    "search": "SecureCampus を検索", "searchPlaceholder": "SecureCampus を検索",
+    "notifications": "通知", "openProfileMenu": "プロフィールメニューを開く",
+    "viewAll": "すべて表示", "sampleDataNotice": "デモ用のサンプルデータ",
+    "openRecord": "{{name}} を開く", "recordSelected": "{{name}} を選択しました", "cancel": "キャンセル"
+  },
+  "dashboard": {
+    "eyebrow": "キャンパスの概要", "heading": "キャンパスの安全と運営を、ひとつの場所で。",
+    "description": "キャンパスサービスを調整し、コミュニティに情報を届けるための明確な出発点です。",
+    "greeting": "{{name}}さん、おはようございます", "subtitle": "今日のキャンパスの状況をご確認ください。",
+    "roleSwitcher": "デモ用の役割を選択", "rolePreview": "{{role}}としてプレビュー中", "newRequest": "新しい申請",
+    "statistics": "キャンパスの統計"
+  },
+  "language": {
+    "label": "言語を選択",
+    "names": { "enUS": "英語（アメリカ合衆国）", "esMX": "スペイン語（メキシコ）", "esES": "スペイン語（スペイン）", "frFR": "フランス語", "deDE": "ドイツ語", "ptBR": "ポルトガル語（ブラジル）", "jaJP": "日本語" }
+  },
+  "health": { "title": "システムの状態", "description": "SecureCampus アプリケーション API へのライブ接続です。", "loading": "接続を確認しています", "available": "アプリケーションはオンラインです", "unavailable": "アプリケーションを利用できません" },
+  "roles": { "student": "学生", "teacher": "教員", "head": "学部長", "admin": "管理者" },
+  "stats": {
+    "attendance": "出席率", "attendanceChange": "前学期比 +2.4%",
+    "activeCourses": "履修中の科目", "courseChange": "課題の期限が3件あります",
+    "pendingRequests": "未完了の申請", "pendingChange": "4件の確認が必要です",
+    "documents": "書類", "documentChange": "今月8件追加",
+    "completion": "完了", "needsAttention": "要確認"
+  },
+  "performance": { "title": "学業成績", "subtitle": "年間の進捗状況", "chartDescription": "月ごとの学業成績グラフ" },
+  "chart": { "months": { "0": "1月", "1": "2月", "2": "3月", "3": "4月", "4": "5月", "5": "6月", "6": "7月", "7": "8月", "8": "9月", "9": "10月", "10": "11月", "11": "12月" } },
+  "activity": {
+    "title": "最近のアクティビティ", "subtitle": "キャンパスのお知らせ",
+    "gradeTitle": "新しい成績が公開されました", "gradeDetail": "上級生物学の成績を確認できます",
+    "documentTitle": "書類が承認されました", "documentDetail": "在学証明書の準備ができました",
+    "requestTitle": "申請を処理中です", "requestDetail": "奨学金申請を確認しています",
+    "timeRecent": "2時間前", "timeYesterday": "昨日", "timeThisWeek": "今週", "allOpened": "すべてのアクティビティを表示しました"
+  },
+  "courses": {
+    "title": "履修科目", "subtitle": "現在の学期の概要", "export": "エクスポート",
+    "exportReady": "科目レポートを準備しました", "course": "科目", "instructor": "担当教員",
+    "credits": "単位", "progress": "進捗", "grade": "成績"
+  },
+  "courseTitles": {
+    "security": "上級セキュリティ", "statistics": "応用統計学",
+    "networks": "ネットワークアーキテクチャ", "ethics": "倫理と社会",
+    "biology": "上級生物学", "design": "インタラクションデザイン演習",
+    "seminar": "研究セミナー"
+  },
+  "instructorNames": { "williams": "A. ウィリアムズ博士", "kim": "J. キム教授", "patel": "R. パテル博士", "garcia": "L. ガルシア教授" },
+  "quickActions": {
+    "documents": { "title": "書類をアップロード" },
+    "calendar": { "title": "カレンダーを表示" },
+    "academics": { "title": "科目を表示" }
+  },
+  "pageDescriptions": {
+    "academics": "科目、課題、学習資料を確認できます。",
+    "grades": "現在の学期の成績を確認できます。",
+    "documents": "大学の公式書類をまとめて確認できます。",
+    "requests": "フォーム、承認、サポート申請の状況を確認できます。",
+    "groups": "学生団体や研究コミュニティを見つけましょう。",
+    "people": "アドバイザー、教員、キャンパスコミュニティとつながりましょう。",
+    "reports": "学業の進捗状況を確認できます。",
+    "calendar": "今後の授業、予定、キャンパスイベントを確認できます。",
+    "help": "回答を探し、キャンパスでサポートを受ける方法を確認できます。"
+  },
+  "grades": { "title": "現在の成績", "biology": "総合 94%", "design": "総合 97%", "seminar": "総合 88%", "statistics": "総合 92%", "gradeA": "A", "gradeB": "B+" },
+  "gradeTitles": {
+    "biology": "上級生物学", "design": "インタラクションデザイン演習",
+    "seminar": "研究セミナー", "statistics": "社会科学統計"
+  },
+  "documents": {
+    "title": "最近の書類", "transcriptDate": "2025年10月12日",
+    "enrollmentDate": "2025年10月8日", "scholarshipDate": "2025年10月2日",
+    "studentIdDate": "2025年9月28日"
+  },
+  "documentTitles": {
+    "transcript": "公式成績証明書", "enrollment": "在学証明書",
+    "scholarship": "奨学金通知書", "studentId": "学生証の確認"
+  },
+  "status": {
+    "approved": "承認済み", "ready": "準備完了", "processing": "処理中",
+    "inProgress": "進行中", "scheduled": "予定済み", "submitted": "提出済み",
+    "active": "有効", "open": "受付中"
+  },
+  "requests": {
+    "title": "最近の申請", "updatedYesterday": "昨日更新",
+    "dueSoon": "期限：10月18日", "appointmentDate": "2025年10月21日",
+    "submittedDate": "2025年10月9日"
+  },
+  "requestTitles": {
+    "transcript": "成績証明書の申請", "financialAid": "奨学金審査",
+    "advisor": "アドバイザーとの面談", "replacement": "学生証の再発行"
+  },
+  "groups": {
+    "title": "キャンパスグループ", "researchMembers": "24名",
+    "designMembers": "86名", "wellnessMembers": "42名",
+    "dataMembers": "61名"
+  },
+  "groupTitles": {
+    "research": "学生研究グループ", "design": "デザインサークル",
+    "wellness": "キャンパスウェルネスサークル", "data": "データサイエンスクラブ"
+  },
+  "people": {
+    "title": "キャンパス名簿", "maya": "マヤ・チェン博士", "james": "ジェームズ・ウィルソン",
+    "nora": "ノラ・パテル", "alex": "アレックス・ロメロ", "advisor": "学業アドバイザー",
+    "departmentHead": "学部長", "instructor": "科目担当教員",
+    "studentServices": "学生サービス", "emailMaya": "maya.chen@securecampus.edu",
+    "emailJames": "james.wilson@securecampus.edu", "emailNora": "nora.patel@securecampus.edu",
+    "emailAlex": "alex.romero@securecampus.edu"
+  },
+  "peoplePage": {
+    "tabs": { "label": "利用者のカテゴリ", "all": "すべてのユーザー", "students": "学生", "teachers": "教員" },
+    "addPerson": "利用者を追加", "role": "役割", "selectRole": "役割を選択",
+    "selectRoleError": "ユーザーを作成するには有効な役割を選択してください。", "loadingRoles": "役割を読み込み中...",
+    "search": "名前またはメールで検索", "loading": "利用者を読み込み中...",
+    "managerOnly": "学生および教員の名簿を表示できるのは管理者と学部長のみです。",
+    "empty": "利用者が見つかりません。", "name": "名前", "email": "メール",
+    "identifier": "学生番号または職員番号", "status": "状態", "allStatuses": "すべての状態", "active": "有効",
+    "inactive": "無効", "suspended": "停止中", "firstName": "名", "lastName": "姓",
+    "password": "仮パスワード（12文字以上）", "phone": "電話番号",
+    "studentNumber": "学生番号", "employeeNumber": "職員番号",
+    "save": "利用者を作成", "saving": "作成中..."
+  },
+  "dataTable": { "range": "{{total}}件中 {{from}}～{{to}}件を表示", "page": "{{current}} / {{last}}ページ", "previous": "前へ", "next": "次へ" },
+  "documentPage": {
+    "upload": "書類をアップロード", "loading": "書類を読み込み中...", "empty": "アップロードされた書類はありません。",
+    "view": "書類の詳細を表示", "download": "書類をダウンロード", "delete": "書類を削除",
+    "confirmDelete": "「{{title}}」を削除しますか？この操作は取り消せません。", "details": "書類の詳細",
+    "title": "タイトル", "category": "カテゴリ", "filename": "元のファイル名", "type": "ファイル形式",
+    "size": "ファイルサイズ", "uploaded": "アップロード日時", "noDetails": "追加情報はありません",
+    "chooseFile": "アップロードする書類を選択", "fileRules": "PDF、PNG、JPG、DOC、DOCX（最大10 MB）",
+    "uploading": "アップロード中...", "uploadProgress": "アップロードの進行状況"
+  },
+  "requestPage": {
+    "newRequest": "新しい申請", "loading": "申請を読み込み中...", "empty": "申請が見つかりません。",
+    "filterStatus": "状態で絞り込む", "allStatuses": "すべての状態", "status": "状態",
+    "statuses": { "Pending": "保留中", "UnderReview": "確認中", "Approved": "承認済み", "Rejected": "却下" },
+    "type": "申請の種類", "title": "タイトル", "description": "説明", "submit": "申請を送信",
+    "saving": "保存中...", "save": "変更を保存", "details": "申請の詳細",
+    "submitted": "申請日", "reviewNotes": "審査メモ", "view": "申請の詳細を表示",
+    "edit": "申請を編集", "delete": "申請を削除",
+    "confirmDelete": "「{{title}}」を削除しますか？この操作は取り消せません。"
+  },
+  "profile": { "name": "オリビア・マーティン", "firstName": "オリビア" },
+  "notifications": {
+    "title": "通知", "message": "未読のキャンパス更新が3件あります。",
+    "markAllRead": "すべて既読にする", "markedRead": "通知を既読にしました"
+  },
+  "dialogs": {
+    "actions": {
+      "newRequest": "新しい申請", "uploadDocument": "書類をアップロード",
+      "createGroup": "グループを作成", "createUser": "ユーザーを作成",
+      "browseCourses": "科目を表示", "browseCalendar": "カレンダーを表示",
+      "browseAcademics": "学業情報を表示"
+    },
+    "dropFile": "アップロードする書類を選択", "fileTypes": "PDF、DOCX、PNG（最大10 MB）",
+    "upload": "書類をアップロード", "titleField": "タイトルまたは名前", "descriptionField": "説明",
+    "save": "保存して続行", "saved": "デモ内で変更を保存しました。",
+    "uploadStarted": "書類のアップロードをシミュレートしました。", "genericAction": "この操作はデモ用です。"
+  },
+  "reports": {
+    "eyebrow": "計画と分析", "progressTitle": "学業の進捗",
+    "attendanceTitle": "科目別出席率",
+    "chartUnavailable": "現在のAPIではグラフデータを取得できません。",
+    "tabs": {
+      "label": "レポートの種類", "students": "学生", "teachers": "教員",
+      "grades": "成績", "academicGroups": "学術グループ"
+    },
+    "managerOnly": "レポートを表示できるのは管理者と学部責任者のみです。",
+    "loading": "レポートを読み込み中...", "empty": "レポートデータがありません。",
+    "name": "氏名", "email": "メールアドレス", "studentNumber": "学生番号",
+    "employeeNumber": "職員番号", "program": "学位プログラム", "status": "状態",
+    "subject": "科目", "student": "学生", "academicGroup": "学術グループ",
+    "finalGrade": "最終成績", "averageGrade": "平均成績", "teacher": "教員",
+    "year": "学年度", "semester": "学期", "enrollments": "履修登録数"
+  },
+  "dashboardData": {
+    "live": "APIの最新データ",
+    "unavailable": "利用不可",
+    "chartUnavailable": "現在のAPIではグラフデータを取得できません。",
+    "activityUnavailable": "現在のAPIでは最近のアクティビティを取得できません。",
+    "scheduleUnavailable": "現在のAPIではスケジュールを取得できません。",
+    "notificationsUnavailable": "現在のAPIでは通知を取得できません。",
+    "loading": "ダッシュボードデータを読み込み中...",
+    "unavailableData": "ダッシュボードデータを読み込めませんでした。"
+  },
+  "calendar": {
+    "unavailable": "現在のAPIではスケジュールを取得できません。",
+    "today": "今後の予定", "event1": "生物学の講義", "event2": "研究セミナー",
+    "event3": "アドバイザー面談", "time1": "午前9時", "time2": "午後1時30分", "time3": "午後3時"
+  },
+  "settings": {
+    "eyebrow": "ワークスペースの設定", "profileTitle": "プロフィール情報",
+    "firstName": "名", "lastName": "姓", "email": "大学メールアドレス",
+    "phone": "電話番号", "program": "専攻", "noProgram": "専攻なし",
+    "save": "変更を保存", "saving": "保存中...",
+    "saved": "プロフィールを保存しました。",
+    "loadError": "プロフィールを読み込めませんでした。ページを更新して再試行してください。",
+    "updateError": "プロフィールを保存できませんでした。もう一度お試しください。",
+    "programsError": "専攻を読み込めませんでした。"
+  },
+  "help": {
+    "eyebrow": "サポートセンター", "topicSelected": "ヘルプ項目を選択しました。",
+    "topics": {
+      "transcript": { "title": "成績証明書を申請するには？", "description": "書類と承認について確認できます。" },
+      "grades": { "title": "成績はどのように計算されますか？", "description": "学業記録を確認できます。" },
+      "support": { "title": "キャンパスサポートに問い合わせる", "description": "学生サービスチームに相談できます。" },
+      "privacy": { "title": "セキュリティとプライバシー", "description": "記録の保護について確認できます。" }
+    }
+  },
+  "login": {
+    "title": "おかえりなさい", "description": "サインインしてキャンパスのワークスペースにアクセスします。",
+    "mockNotice": "大学のアカウントでサインインしてください。アクセスが必要な場合は管理者にお問い合わせください。",
+    "email": "大学メールアドレス", "password": "パスワード",
+    "signIn": "サインイン", "forgotPassword": "パスワードをお忘れですか？",
+    "resetTitle": "パスワードを再設定",
+    "resetDescription": "パスワードの再設定は現在利用できません。管理者にお問い合わせください。",
+    "sendReset": "続行", "back": "サインインに戻る",
+    "invalidCredentials": "メールアドレスまたはパスワードが正しくありません。",
+    "authError": "現在サインインできません。もう一度お試しください。",
+    "logoutError": "サーバーでサインアウトを確認できませんでした。ローカルセッションを削除しました。",
+    "resetUnavailable": "パスワードの再設定は現在利用できません。管理者にお問い合わせください。",
+    "restoringSession": "セッションを復元しています。"
+  }
+}
