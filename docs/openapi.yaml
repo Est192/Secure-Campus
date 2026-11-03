@@ -1,0 +1,1001 @@
+openapi: 3.1.0
+info:
+  title: SecureCampus API
+  version: 1.0.0
+  description: >-
+    Versioned REST API for campus users, academic records, documents, requests,
+    and reports. Protected routes require a Laravel Sanctum bearer token.
+servers:
+  - url: http://localhost:8080
+    description: Local Docker Compose
+tags:
+  - name: Health
+  - name: Authentication
+  - name: Roles
+  - name: Users
+  - name: Degree Programs
+  - name: Subjects
+  - name: Academic Groups
+  - name: Students
+  - name: Teachers
+  - name: Enrollments
+  - name: Grades
+  - name: Documents
+  - name: Requests
+  - name: Reports
+security:
+  - bearerAuth: []
+paths:
+  /api/health:
+    get:
+      tags: [Health]
+      summary: Check API health
+      security: []
+      responses:
+        "200":
+          description: API is available
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    const: ok
+  /api/v1/auth/login:
+    post:
+      tags: [Authentication]
+      summary: Create a Sanctum API token
+      description: Rate limited to 10 login attempts per minute per client.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+                device_name:
+                  type: string
+                  maxLength: 100
+      responses:
+        "200":
+          description: Token issued
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, token, token_type]
+                properties:
+                  data:
+                    $ref: "#/components/schemas/User"
+                  token:
+                    type: string
+                  token_type:
+                    const: Bearer
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/auth/logout:
+    post:
+      tags: [Authentication]
+      summary: Revoke the current Sanctum token
+      responses:
+        "200":
+          description: Token revoked
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /api/v1/roles:
+    get:
+      tags: [Roles]
+      summary: List roles
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Roles]
+      summary: Create a role (Administrator only)
+      requestBody:
+        $ref: "#/components/requestBodies/RecordInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/roles/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Roles]
+      summary: Get a role
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Roles]
+      summary: Replace role fields (Administrator only)
+      requestBody:
+        $ref: "#/components/requestBodies/RecordInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Roles]
+      summary: Update role fields (Administrator only)
+      requestBody:
+        $ref: "#/components/requestBodies/RecordInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Roles]
+      summary: Delete a role (Administrator only)
+      responses:
+        "204":
+          description: Role deleted
+  /api/v1/users:
+    get:
+      tags: [Users]
+      summary: List users
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Users]
+      summary: Create a user (Administrator only)
+      requestBody:
+        $ref: "#/components/requestBodies/UserInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/users/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Users]
+      summary: Get a user
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Users]
+      summary: Replace user fields
+      requestBody:
+        $ref: "#/components/requestBodies/UserInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Users]
+      summary: Update user fields
+      requestBody:
+        $ref: "#/components/requestBodies/UserInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Users]
+      summary: Delete a user
+      responses:
+        "204":
+          description: User deleted
+  /api/v1/degree-programs:
+    get:
+      tags: [Degree Programs]
+      summary: List degree programs
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Degree Programs]
+      summary: Create a degree program
+      requestBody:
+        $ref: "#/components/requestBodies/DegreeProgramInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/degree-programs/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Degree Programs]
+      summary: Get a degree program
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Degree Programs]
+      summary: Replace degree program fields
+      requestBody:
+        $ref: "#/components/requestBodies/DegreeProgramInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Degree Programs]
+      summary: Update degree program fields
+      requestBody:
+        $ref: "#/components/requestBodies/DegreeProgramInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Degree Programs]
+      summary: Delete a degree program
+      responses:
+        "204":
+          description: Degree program deleted
+  /api/v1/subjects:
+    get:
+      tags: [Subjects]
+      summary: List subjects
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Subjects]
+      summary: Create a subject
+      requestBody:
+        $ref: "#/components/requestBodies/SubjectInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/subjects/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Subjects]
+      summary: Get a subject
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Subjects]
+      summary: Replace subject fields
+      requestBody:
+        $ref: "#/components/requestBodies/SubjectInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Subjects]
+      summary: Update subject fields
+      requestBody:
+        $ref: "#/components/requestBodies/SubjectInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Subjects]
+      summary: Delete a subject
+      responses:
+        "204":
+          description: Subject deleted
+  /api/v1/academic-groups:
+    get:
+      tags: [Academic Groups]
+      summary: List academic groups
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Academic Groups]
+      summary: Create an academic group
+      requestBody:
+        $ref: "#/components/requestBodies/AcademicGroupInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/academic-groups/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Academic Groups]
+      summary: Get an academic group
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Academic Groups]
+      summary: Replace academic group fields
+      requestBody:
+        $ref: "#/components/requestBodies/AcademicGroupInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Academic Groups]
+      summary: Update academic group fields
+      requestBody:
+        $ref: "#/components/requestBodies/AcademicGroupInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Academic Groups]
+      summary: Delete an academic group
+      responses:
+        "204":
+          description: Academic group deleted
+  /api/v1/students:
+    get:
+      tags: [Students]
+      summary: List students (academic managers)
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Students]
+      summary: Create a student
+      requestBody:
+        $ref: "#/components/requestBodies/StudentInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/students/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Students]
+      summary: Get a student
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Students]
+      summary: Replace student fields
+      requestBody:
+        $ref: "#/components/requestBodies/StudentInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Students]
+      summary: Update student fields
+      requestBody:
+        $ref: "#/components/requestBodies/StudentInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Students]
+      summary: Delete a student
+      responses:
+        "204":
+          description: Student deleted
+  /api/v1/teachers:
+    get:
+      tags: [Teachers]
+      summary: List teachers (academic managers)
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Teachers]
+      summary: Create a teacher
+      requestBody:
+        $ref: "#/components/requestBodies/TeacherInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/teachers/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Teachers]
+      summary: Get a teacher
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Teachers]
+      summary: Replace teacher fields
+      requestBody:
+        $ref: "#/components/requestBodies/TeacherInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Teachers]
+      summary: Update teacher fields
+      requestBody:
+        $ref: "#/components/requestBodies/TeacherInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Teachers]
+      summary: Delete a teacher
+      responses:
+        "204":
+          description: Teacher deleted
+  /api/v1/enrollments:
+    get:
+      tags: [Enrollments]
+      summary: List enrollments
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Enrollments]
+      summary: Create an enrollment
+      requestBody:
+        $ref: "#/components/requestBodies/EnrollmentInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/enrollments/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Enrollments]
+      summary: Get an enrollment
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Enrollments]
+      summary: Replace enrollment fields
+      requestBody:
+        $ref: "#/components/requestBodies/EnrollmentInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Enrollments]
+      summary: Update enrollment fields
+      requestBody:
+        $ref: "#/components/requestBodies/EnrollmentInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Enrollments]
+      summary: Delete an enrollment
+      responses:
+        "204":
+          description: Enrollment deleted
+  /api/v1/grades:
+    get:
+      tags: [Grades]
+      summary: List grades
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Grades]
+      summary: Create a grade and calculate its average
+      requestBody:
+        $ref: "#/components/requestBodies/GradeInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/grades/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Grades]
+      summary: Get a grade
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Grades]
+      summary: Replace grade fields and recalculate its average
+      requestBody:
+        $ref: "#/components/requestBodies/GradeInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Grades]
+      summary: Update grade fields and recalculate its average
+      requestBody:
+        $ref: "#/components/requestBodies/GradeInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Grades]
+      summary: Delete a grade
+      responses:
+        "204":
+          description: Grade deleted
+  /api/v1/documents:
+    get:
+      tags: [Documents]
+      summary: List documents visible to the current user
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Documents]
+      summary: Upload a document
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [title, file]
+              properties:
+                title:
+                  type: string
+                  maxLength: 255
+                category:
+                  type: string
+                  maxLength: 100
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/documents/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Documents]
+      summary: Get document metadata
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Documents]
+      summary: Delete a document and its stored file
+      responses:
+        "204":
+          description: Document deleted
+  /api/v1/documents/{id}/download:
+    get:
+      tags: [Documents]
+      summary: Download the stored document
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Original file stream
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  /api/v1/requests:
+    get:
+      tags: [Requests]
+      summary: List requests visible to the current user
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+    post:
+      tags: [Requests]
+      summary: Submit a request as Pending
+      requestBody:
+        $ref: "#/components/requestBodies/RequestInput"
+      responses:
+        "201":
+          $ref: "#/components/responses/Resource"
+  /api/v1/requests/{id}:
+    parameters:
+      - $ref: "#/components/parameters/Id"
+    get:
+      tags: [Requests]
+      summary: Get a request
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    put:
+      tags: [Requests]
+      summary: Update an owned Pending request
+      requestBody:
+        $ref: "#/components/requestBodies/RequestInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    patch:
+      tags: [Requests]
+      summary: Update an owned Pending request
+      requestBody:
+        $ref: "#/components/requestBodies/RequestInput"
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+    delete:
+      tags: [Requests]
+      summary: Delete a request
+      responses:
+        "204":
+          description: Request deleted
+  /api/v1/requests/{id}/status:
+    patch:
+      tags: [Requests]
+      summary: Transition a request status (academic managers)
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status:
+                  type: string
+                  enum: [Under Review, Approved, Rejected]
+                review_notes:
+                  type: string
+                  nullable: true
+                  maxLength: 5000
+      responses:
+        "200":
+          $ref: "#/components/responses/Resource"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+  /api/v1/reports/students:
+    get:
+      tags: [Reports]
+      summary: List students for reporting
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+  /api/v1/reports/teachers:
+    get:
+      tags: [Reports]
+      summary: List teachers for reporting
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+  /api/v1/reports/grades:
+    get:
+      tags: [Reports]
+      summary: List grades for reporting
+      parameters:
+        - name: academic_group_id
+          in: query
+          schema:
+            type: integer
+        - $ref: "#/components/parameters/PerPage"
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+  /api/v1/reports/academic-groups:
+    get:
+      tags: [Reports]
+      summary: List academic groups with enrollment counts
+      responses:
+        "200":
+          $ref: "#/components/responses/PaginatedCollection"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: Sanctum token
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+    PerPage:
+      name: per_page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 15
+  requestBodies:
+    RecordInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+    UserInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/UserInput"
+    DegreeProgramInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/DegreeProgramInput"
+    SubjectInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/SubjectInput"
+    AcademicGroupInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AcademicGroupInput"
+    StudentInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/StudentInput"
+    TeacherInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/TeacherInput"
+    EnrollmentInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/EnrollmentInput"
+    GradeInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/GradeInput"
+    RequestInput:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/RequestInput"
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        name:
+          type: string
+          description: Full name retained for compatibility with Laravel integrations.
+        email:
+          type: string
+          format: email
+        role_id:
+          type: integer
+          nullable: true
+        status:
+          type: string
+          enum: [active, inactive, suspended]
+        degree_program_id:
+          type: integer
+          nullable: true
+        academic_group_id:
+          type: integer
+          nullable: true
+        student_number:
+          type: string
+          nullable: true
+        employee_number:
+          type: string
+          nullable: true
+        phone:
+          type: string
+          nullable: true
+    UserInput:
+      type: object
+      properties:
+        first_name:
+          type: string
+          maxLength: 120
+        last_name:
+          type: string
+          maxLength: 120
+        name:
+          type: string
+          description: Legacy full-name input accepted in place of first_name and last_name.
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+          minLength: 12
+        role_id:
+          type: integer
+        status:
+          type: string
+          enum: [active, inactive, suspended]
+        degree_program_id:
+          type: integer
+          nullable: true
+        academic_group_id:
+          type: integer
+          nullable: true
+        student_number:
+          type: string
+          nullable: true
+        employee_number:
+          type: string
+          nullable: true
+        phone:
+          type: string
+          nullable: true
+    StudentInput:
+      allOf:
+        - $ref: "#/components/schemas/UserInput"
+    TeacherInput:
+      allOf:
+        - $ref: "#/components/schemas/UserInput"
+    DegreeProgramInput:
+      type: object
+      required: [name, code]
+      properties:
+        name:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+          nullable: true
+    SubjectInput:
+      type: object
+      required: [name, code]
+      properties:
+        name:
+          type: string
+        code:
+          type: string
+        description:
+          type: string
+          nullable: true
+        credits:
+          type: integer
+          minimum: 1
+          maximum: 60
+    AcademicGroupInput:
+      type: object
+      required: [name, degree_program_id, academic_year, semester]
+      properties:
+        name:
+          type: string
+        degree_program_id:
+          type: integer
+        teacher_id:
+          type: integer
+          nullable: true
+        academic_year:
+          type: string
+        semester:
+          type: string
+    EnrollmentInput:
+      type: object
+      required: [student_id, academic_group_id]
+      properties:
+        student_id:
+          type: integer
+        academic_group_id:
+          type: integer
+        status:
+          type: string
+          enum: [active, withdrawn, completed]
+        enrolled_at:
+          type: string
+          format: date
+          nullable: true
+    GradeInput:
+      type: object
+      required: [enrollment_id, subject_id]
+      properties:
+        enrollment_id:
+          type: integer
+        subject_id:
+          type: integer
+        first_partial:
+          type: number
+          minimum: 0
+          maximum: 100
+          nullable: true
+        second_partial:
+          type: number
+          minimum: 0
+          maximum: 100
+          nullable: true
+        third_partial:
+          type: number
+          minimum: 0
+          maximum: 100
+          nullable: true
+        final_grade:
+          type: number
+          minimum: 0
+          maximum: 100
+          nullable: true
+        average_grade:
+          readOnly: true
+          type: number
+          nullable: true
+    RequestInput:
+      type: object
+      required: [type, title]
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+          nullable: true
+    ResourceEnvelope:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    PaginatedEnvelope:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        links:
+          type: object
+          additionalProperties: true
+        meta:
+          type: object
+          additionalProperties: true
+    ValidationError:
+      type: object
+      properties:
+        message:
+          type: string
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+  responses:
+    Resource:
+      description: Resource returned
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ResourceEnvelope"
+    PaginatedCollection:
+      description: Paginated resource collection
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PaginatedEnvelope"
+    ValidationError:
+      description: Request validation failed
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ValidationError"
+    Unauthorized:
+      description: Authentication required

@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 \.venv/
 __pycache__/
 .pytest_cache/
 *.db
 .env
+=======
+.env
+.env.*
+!.env.example
+**/.DS_Store
+**/Thumbs.db
+backend/vendor/
+backend/storage/*.key
+backend/storage/logs/*.log
+backend/bootstrap/cache/*.php
+backend/.phpunit.cache/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+>>>>>>> 9012a33a63113b6ca7054e973c3991986283c923
